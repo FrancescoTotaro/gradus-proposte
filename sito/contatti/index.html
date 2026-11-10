@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141413">
+<meta name="color-scheme" content="dark">
+<title>Contatti · Gradus (anteprima)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>dc-host{display:contents}</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-head) a{color:inherit;text-decoration:none}
+:where(.cmp-head) a:focus-visible,:where(.cmp-head) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-head) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-head) .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+:where(.cmp-head) .pill-red{background:#c2063a;color:#fff}
+:where(.cmp-head) summary{list-style:none;cursor:pointer}
+:where(.cmp-head) summary::-webkit-details-marker{display:none}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-head) *,:where(.cmp-head) *::before,:where(.cmp-head) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@media (max-width:767px){
+:where(.cmp-head) .wrap{padding-left:20px;padding-right:20px}
+}
+@media (hover:hover) and (pointer:fine){
+:where(.cmp-head) .pill-red:hover{background:#a40531}
+}
+:where(.cmp-head) a,:where(.cmp-head) button,:where(.cmp-head) summary{touch-action:manipulation}
+:where(.cmp-head) button,:where(.cmp-head) .pill{-webkit-user-select:none;user-select:none}
+:where(.cmp-head) .pill{transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+:where(.cmp-head) .pill:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-head) .pill:active{transform:none}
+}
+.site-head{position:sticky;top:0;z-index:20;border-bottom:1px solid transparent}
+.bar{height:80px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.nav-d{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav-d a{opacity:.85;transition:opacity var(--dur-fast) var(--ease-out)}
+.nav-m{display:none}
+@media (prefers-reduced-motion:no-preference){
+@supports (animation-timeline:scroll()){
+.site-head{animation:headIn linear both;animation-timeline:scroll();animation-range:0 240px}
+}
+}
+@media (max-width:900px){
+.nav-d{display:none}
+.nav-m{display:block}
+}
+.mn-nav{display:flex;gap:12px;font-size:14px;font-weight:500}
+.mn-nv{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 8px;font:inherit;font-weight:500;color:#fff;background:none;border:0;cursor:pointer}
+.mn-nv svg{transition:transform 250ms cubic-bezier(.2,.8,.2,1)}
+.mn-nv[aria-expanded="true"]{text-decoration:underline;text-decoration-color:#fff;text-decoration-thickness:2px;text-underline-offset:8px}
+.mn-nv[aria-expanded="true"] svg{transform:rotate(180deg)}
+.mn-nv:focus-visible,.mn-burger:focus-visible,.mn-mob button:focus-visible,.mn-mob a:focus-visible,.mn-band a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:6px}
+.mn-scrim{position:absolute;left:0;right:0;top:100%;height:100vh;height:100dvh;background:rgba(20,20,19,.6);animation:mnFade 200ms ease-out both}
+.mn-band{position:absolute;left:0;right:0;top:100%;z-index:2;background:#1d1d1c;border-top:1px solid rgba(255,255,255,.12);animation:mnIn 250ms cubic-bezier(.2,.8,.2,1) both}
+.mn-band-in{max-width:1360px;margin:0 auto;padding:40px 24px 48px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.mn-band-l{padding-right:40px;display:flex;flex-direction:column;gap:16px}
+.mn-band-l small{font-size:14px;line-height:20px;font-weight:500;color:#c9ccce}
+.mn-band-l p{margin:0;font-size:28px;line-height:34px;font-weight:700;letter-spacing:-.02em;text-wrap:balance}
+.mn-band-l a{align-self:flex-start;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-band-r{border-left:1px solid rgba(255,255,255,.16);padding-left:40px}
+.mn-band-r ul,.mn-mob ul{list-style:none;margin:0;padding:0}
+.mn-band-r ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+.mn-band-r li{border-bottom:1px solid #4a4947}
+.mn-band-r li a{display:flex;align-items:center;justify-content:space-between;min-height:68px;font-size:24px;font-weight:600;letter-spacing:-.01em}
+.mn-band-r li a svg{color:#c9ccce;transition:color 150ms,transform 250ms cubic-bezier(.2,.8,.2,1)}
+.mn-band-r li a:focus-visible svg{color:#fff;transform:translateX(4px)}
+.mn-burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:none;border:0;color:#fff;cursor:pointer}
+.mn-mob{position:absolute;top:0;left:0;right:0;height:100vh;height:100dvh;z-index:60;background:#1d1d1c;color:#fff;display:flex;flex-direction:column;overflow-y:auto;animation:mnFade 200ms ease-out both}
+.mn-mob-hd{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 16px}
+.mn-mob-hd img{display:block;height:24px;width:auto}
+.mn-mob-hd button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:none;border:0;color:#fff;cursor:pointer}
+.mn-lv1{padding:8px 20px 0}
+.mn-lv1 li{border-bottom:1px solid #4a4947}
+.mn-lv1 a,.mn-lv1 button{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:68px;padding:0;background:none;border:0;color:#fff;font:inherit;font-size:26px;font-weight:600;letter-spacing:-.01em;text-align:left;cursor:pointer}
+.mn-lv1 svg{color:#c9ccce}
+.mn-lv2-top{display:flex;align-items:center;gap:6px;min-height:52px;padding:0 20px;background:none;border:0;color:#c9ccce;font:inherit;font-size:15px;font-weight:600;cursor:pointer;align-self:flex-start}
+.mn-lv2-h{margin:4px 20px 8px;font-size:30px;line-height:36px;font-weight:700;letter-spacing:-.02em}
+.mn-lv2-all{align-self:flex-start;margin:0 20px 12px;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-foot{margin-top:auto;padding:16px 20px 24px;display:flex;flex-direction:column;gap:14px;border-top:1px solid #4a4947}
+.mn-meta{display:flex;align-items:center;justify-content:space-between;min-height:44px;font-size:14px;font-weight:500;color:#c9ccce}
+.mn-meta span:last-child{display:flex;gap:16px}
+.mn-meta a{color:#fff}
+.mn-meta a[aria-current]{text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-foot .pill{width:100%;min-height:52px;font-size:15px;box-sizing:border-box}
+@media (max-width:1199px){
+.mn-nav,.mn-lang,.mn-cta{display:none!important}
+.mn-burger{display:inline-flex}
+.mn-band,.mn-scrim{display:none}
+}
+@media (min-width:1200px){
+.mn-mob{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+.mn-scrim,.mn-band,.mn-mob{animation:none}
+.mn-nv svg,.mn-band-r li a svg{transition:none}
+}
+@media (hover:hover) and (pointer:fine){
+.nav-d a:hover{opacity:1;text-decoration:underline;text-decoration-color:#c2063a;text-underline-offset:7px;text-decoration-thickness:2px}
+.mn-nv:hover{text-shadow:.6px 0 0 #fff,-.6px 0 0 #fff}
+.mn-band-r li a:hover svg{color:#fff;transform:translateX(4px)}
+.mn-band-r li a:hover span{text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+}
+.mn-mob{overscroll-behavior:contain}
+.mn-foot{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;padding:12px 20px;border-radius:999px;background:#fff;color:#1d1d1c;font-size:15px;font-weight:600}
+.skip:focus{top:12px}
+@keyframes headIn{from{background:rgba(20,20,19,0);border-bottom-color:transparent}to{background:rgba(20,20,19,.88);border-bottom-color:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}}
+@keyframes mnFade{from{opacity:0}}
+@keyframes mnIn{from{opacity:0;transform:translateY(-8px)}}
+</style>
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-foot) a{color:inherit;text-decoration:none}
+:where(.cmp-foot) a:focus-visible,:where(.cmp-foot) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-foot) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-foot) .label{font-size:14px;line-height:1.5;font-weight:500;color:#c9ccce}
+:where(.cmp-foot) summary{list-style:none;cursor:pointer}
+:where(.cmp-foot) summary::-webkit-details-marker{display:none}
+:where(.cmp-foot) .grid2{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:1px solid var(--hair)}
+:where(.cmp-foot) .grid2>.label{padding:28px 40px 0 0}
+:where(.cmp-foot) .grid2>.content{padding:28px 0 0 40px;min-width:0;border-left:1px solid var(--hair)}
+@media (max-width:900px){
+:where(.cmp-foot) .grid2{grid-template-columns:minmax(0,1fr)}
+:where(.cmp-foot) .grid2>.label{padding:24px 0 0}
+:where(.cmp-foot) .grid2>.content{padding:12px 0 0;border-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-foot) *,:where(.cmp-foot) *::before,:where(.cmp-foot) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+:where(.cmp-foot) .reveal{margin-inline:-48px;padding-inline:48px;view-timeline-name:--sezione;animation:reveal-fondo linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%}
+:where(.cmp-foot) .reveal>.wrap{animation:reveal-zoom linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%;transform-origin:50% 0}
+}
+}
+@media (max-width:767px){
+:where(.cmp-foot) .wrap{padding-left:20px;padding-right:20px}
+:where(.cmp-foot) .grid2>.content{padding-top:8px}
+}
+:where(.cmp-foot) a,:where(.cmp-foot) button,:where(.cmp-foot) summary{touch-action:manipulation}
+:where(.cmp-foot) button{-webkit-user-select:none;user-select:none}
+@supports (animation-timeline: view()){
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference){
+:where(.cmp-foot) .reveal{animation-name:reveal-fondo-m}
+}
+}
+.ft-q{display:none}
+.ft-col{display:flex;flex-direction:column;gap:14px}
+.ft-links{display:flex;flex-direction:column;gap:14px}
+.ft-h{color:#fff;font-weight:700}
+.ft-hl{align-self:flex-start;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.ft-all{display:none}
+@media (hover:hover) and (pointer:fine){
+.cmp-foot .ft-links a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+}
+@media (max-width:767px){
+.ft-cols{display:block!important;padding-top:16px!important}
+.ft-col{gap:0;border-bottom:1px solid #4a4947}
+.ft-col:first-child{border-top:1px solid #4a4947}
+.ft-h{display:none}
+.ft-q{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:56px;padding:0;background:none;border:0;color:#fff;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.ft-q svg{transition:transform 250ms cubic-bezier(.2,.8,.2,1)}
+.ft-q[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ft-q:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:6px}
+.ft-links{display:none;gap:4px;padding-bottom:16px}
+.ft-links[data-open="true"]{display:flex}
+.ft-links a{display:flex;align-items:center;min-height:44px}
+.ft-links .ft-all{display:flex}
+}
+@keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
+@keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+</style>
+<style>
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--hair:rgba(255,255,255,.16);--ease-out:cubic-bezier(.2,.8,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms}
+body{margin:0;font-family:'Montserrat',system-ui,sans-serif;color:#fff;background:#1d1d1c}
+html,body{overflow-x:clip}
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;scroll-padding-top:110px}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+a,button,input,select,textarea,label{touch-action:manipulation}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+.label{font-size:14px;line-height:1.5;font-weight:500;color:#c9ccce}
+.lnk{color:#fff;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px;transition:color var(--dur-fast) var(--ease-out)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;box-sizing:border-box;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;border:0;-webkit-user-select:none;user-select:none;transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+.pill:active{transform:scale(.97)}
+.pill-red{background:#c2063a;color:#fff;border:1px solid #e0587c}
+.pill-white{background:#fff;color:#1d1d1c}
+.pill-line{background:none;border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.grid2{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:1px solid var(--hair)}
+.grid2>.label{padding:28px 40px 0 0}
+.grid2>.content{padding:28px 0 0 40px;min-width:0;border-left:1px solid var(--hair)}
+.sf-crumbs ol{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none;font-size:14px;line-height:20px;color:rgba(255,255,255,.82)}
+.sf-crumbs li+li::before{content:"\203A";margin-right:8px}
+.sf-crumbs [aria-current]{color:#fff;font-weight:600}
+.sf-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0}
+.sf-sticky{display:none}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.reveal{margin-inline:-48px;padding-inline:48px;view-timeline-name:--sezione;animation:reveal-fondo linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%}
+.reveal>.wrap{animation:reveal-zoom linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%;transform-origin:50% 0}
+}
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference){.reveal{animation-name:reveal-fondo-m}}
+}
+@keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
+.ct-sec.reveal{margin-inline:-48px;padding-inline:48px}
+#modulo,#sedi{scroll-margin-top:110px}
+
+/* Apertura */
+.ct-hero{position:relative;margin-top:-82px;padding:168px 0 72px;background:radial-gradient(55% 90% at 88% 0%,rgba(194,6,58,.42) 0%,rgba(139,13,43,.18) 45%,rgba(29,29,28,0) 75%),#1d1d1c}
+.ct-hero-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end}
+.ct-h1{margin:0;font-size:72px;line-height:1;font-weight:800;letter-spacing:-.03em;text-wrap:balance}
+.ct-lead{margin:28px 0 0;font-size:20px;line-height:32px;color:#e4e7e9;max-width:600px}
+.ct-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ct-direct{padding:32px;border-radius:18px;background:#262625}
+.ct-direct h2{margin:0 0 8px;font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.ct-direct dl{margin:0}
+.ct-direct dl>div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid var(--hair)}
+.ct-direct dl>div:first-child{border-top:0}
+.ct-direct svg.ct-ico{width:24px;height:24px;margin-top:2px}
+.ct-direct dt{font-size:13px;line-height:18px;color:#c9ccce}
+.ct-direct dd{margin:4px 0 0;font-size:18px;line-height:27px;font-weight:600}
+.ct-direct dd a{display:inline-flex;align-items:center;min-height:32px}
+
+/* Modulo */
+.ct-sec{padding:96px 0 0}
+.ct-h2{margin:0;font-size:clamp(32px,3.4vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.03em;text-wrap:balance;max-width:820px}
+.ct-intro{margin:20px 0 0;font-size:19px;line-height:1.6;color:#e4e7e9;max-width:640px}
+.ct-form-wrap{margin-top:48px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:40px;align-items:start}
+.ct-aside{position:sticky;top:112px;display:flex;flex-direction:column;gap:16px}
+.ct-steps{list-style:none;margin:0;padding:0;counter-reset:p}
+.ct-steps li{counter-increment:p;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid var(--hair);font-size:16px;line-height:25px;color:#e4e7e9}
+.ct-steps li::before{content:counter(p,decimal-leading-zero);font-size:24px;line-height:1;font-weight:800;color:#D2003C;font-variant-numeric:tabular-nums}
+.ct-box{padding:40px;border-radius:18px;background:#262625}
+
+/* Scelta del motivo */
+.ct-reasons{margin:0;padding:0;border:0;min-width:0}
+.ct-reasons legend{padding:0;margin:0 0 16px;font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.ct-reasons-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.ct-reason{position:relative;display:flex;flex-direction:column;gap:10px;min-height:120px;padding:16px;box-sizing:border-box;border-radius:14px;background:#1d1d1c;border:1.5px solid rgba(255,255,255,.18);cursor:pointer;transition:border-color var(--dur-fast) var(--ease-out),background-color var(--dur-fast) var(--ease-out)}
+.ct-reason input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.ct-reason svg{width:32px;height:32px}
+.ct-reason b{font-size:15px;line-height:20px;font-weight:700}
+.ct-reason[data-on="true"]{border-color:#D2003C;background:#2f2e2d;box-shadow:inset 0 0 0 1px #D2003C}
+.ct-reason:has(input:focus-visible){outline:3px solid #fff;outline-offset:3px}
+
+/* Campi */
+.ct-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px;margin-top:36px;padding-top:32px;border-top:1px solid var(--hair)}
+.ct-for{grid-column:1/-1;margin:0;font-size:15px;color:#c9ccce}
+.ct-for b{color:#fff}
+.ct-f{display:flex;flex-direction:column;gap:8px;min-width:0}
+.ct-f--full{grid-column:1/-1}
+.ct-f label,.ct-f .ct-lbl{font-size:13px;line-height:16px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.ct-star{color:#fff}
+.ct-opt{font-weight:500;text-transform:none;letter-spacing:0;color:#c9ccce}
+.ct-in{width:100%;min-height:52px;padding:12px 16px;box-sizing:border-box;border-radius:10px;border:1.5px solid #8a9096;background:#1d1d1c;font-size:16px;line-height:24px;transition:border-color var(--dur-fast) var(--ease-out)}
+select.ct-in{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:44px}
+textarea.ct-in{min-height:140px;resize:vertical}
+.ct-in:focus{outline:3px solid #fff;outline-offset:2px;border-color:#fff}
+.ct-in[aria-invalid="true"]{border:2px solid #D2003C}
+.ct-hint{margin:0;font-size:13px;line-height:20px;color:#c9ccce}
+.ct-err{display:flex;align-items:flex-start;gap:8px;margin:0;font-size:14px;line-height:20px;color:#fff}
+.ct-err::before{content:"!";flex:0 0 auto;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#D2003C;font-size:13px;font-weight:800;line-height:1}
+.ct-check{grid-column:1/-1;display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start}
+.ct-check input{width:22px;height:22px;margin:1px 0 0;accent-color:#c2063a}
+.ct-check label{font-size:15px;line-height:24px;color:#e4e7e9;text-transform:none;letter-spacing:0;font-weight:400}
+.ct-check .ct-err{grid-column:2}
+.ct-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:8px}
+.ct-req-note{margin:0;font-size:13px;color:#c9ccce}
+.ct-alert{grid-column:1/-1;display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 18px;border-radius:12px;border:2px dashed #D2003C;background:#3d1620}
+.ct-alert::before{content:"!";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#D2003C;font-size:13px;font-weight:800}
+.ct-alert b{display:block;font-size:16px}
+.ct-alert p{margin:4px 0 0;font-size:15px;line-height:24px}
+
+/* Assistenza: rimando */
+.ct-assist{margin-top:36px;padding:32px;border-radius:16px;background:radial-gradient(90% 120% at 85% 110%,#b3123f 0%,#8b0d2b 45%,#4a0718 100%)}
+.ct-assist h3{margin:0;font-size:28px;line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.ct-assist p{margin:12px 0 0;font-size:17px;line-height:27px;color:rgba(255,255,255,.92);max-width:560px}
+.ct-assist-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* Conferma */
+.ct-ok{display:flex;flex-direction:column;gap:16px}
+.ct-ok-badge{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:6px 14px 6px 8px;border-radius:999px;background:#12331f;color:#3fbf82;font-size:14px;font-weight:700}
+.ct-ok-badge svg{width:22px;height:22px}
+.ct-ok h3{margin:0;font-size:32px;line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.ct-ok p{margin:0;font-size:17px;line-height:27px;color:#e4e7e9;max-width:560px}
+.ct-recap{margin:8px 0 0;border-top:1px solid var(--hair)}
+.ct-recap>div{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--hair)}
+.ct-recap dt{font-size:14px;color:#c9ccce}
+.ct-recap dd{margin:0;font-size:16px;font-weight:600;overflow-wrap:anywhere}
+.ct-ok-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+
+/* Sedi */
+.ct-sedi{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px;margin-top:48px;align-items:stretch}
+.ct-sedi-l{display:flex;flex-direction:column;gap:20px}
+.ct-sede{padding:32px;border-radius:16px;background:#262625;display:flex;flex-direction:column;gap:12px}
+.ct-sede h3{margin:0;font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.ct-sede address{font-style:normal;font-size:20px;line-height:30px;font-weight:600}
+.ct-sede p{margin:0;font-size:15px;line-height:24px;color:#c9ccce}
+.ct-sede .lnk{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:15px}
+.ct-map{position:relative;min-height:520px;border-radius:18px;overflow:hidden;background:#121211;border:1px solid rgba(255,255,255,.08)}
+.ct-map-img{position:absolute;width:max(260%,1700px);max-width:none;left:50%;top:50%;height:auto;aspect-ratio:2000/2360;transform:translate(-50.69%,-36.25%)}
+.ct-map::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 80px 30px #121211}
+.ct-mk{position:absolute;left:50%;top:50%;z-index:2;width:44px;height:66px;margin:-66px 0 0 -22px}
+.ct-mk svg{display:block;width:44px;height:66px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.6))}
+.ct-mk-l{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:10px;padding:8px 14px;border-radius:8px;background:#fff;color:#1d1d1c;font-size:14px;line-height:18px;font-weight:700;white-space:nowrap;text-align:center}
+.ct-mk-l small{display:block;font-size:12px;font-weight:500;color:#5c5a58}
+.ct-map-note{position:absolute;z-index:2;left:16px;bottom:14px;margin:0;font-size:12px;color:#c9ccce}
+
+/* Rimandi */
+.ct-links{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ct-links>li{display:flex}
+.ct-link{position:relative;flex:1;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:center;padding:28px;border-radius:16px;background:#262625;overflow:hidden;isolation:isolate}
+.ct-link::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 120% at 100% 100%,rgba(194,6,58,.75),rgba(194,6,58,0) 70%);opacity:0;transition:opacity var(--dur-slow) var(--ease-out)}
+.ct-link svg.ct-li{width:44px;height:44px}
+.ct-link b{display:block;font-size:22px;line-height:1.2;font-weight:700}
+.ct-link small{display:block;margin-top:6px;font-size:15px;line-height:22px;color:#c9ccce}
+.ct-round{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#1d1d1c;transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform var(--dur-base) var(--ease-out)}
+.ct-link:focus-visible::after{opacity:1}
+.ct-end{height:96px}
+
+@media (hover:hover) and (pointer:fine){
+.lnk:hover{text-decoration-thickness:3px;text-underline-offset:8px}
+.pill-red:hover{background:#a40531}
+.pill-white:hover{background:#f1ece8}
+.pill-line:hover{background:#fff;color:#1d1d1c}
+.sf-crumbs a:hover{text-decoration:underline;text-underline-offset:4px}
+.ct-reason:hover{border-color:rgba(255,255,255,.6)}
+.ct-reason[data-on="true"]:hover{border-color:#D2003C}
+.ct-in:hover{border-color:#fff}
+.ct-link:hover::after{opacity:1}
+.ct-link:hover .ct-round{background:#c2063a;color:#fff;transform:rotate(-45deg)}
+}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{transition-property:color,background-color,border-color,opacity!important;transition-duration:var(--dur-fast)!important}
+.pill:active,.ct-link:hover .ct-round{transform:none}
+}
+@media (max-width:1199px){
+.ct-hero-in{grid-template-columns:minmax(0,1fr);gap:40px}
+.ct-form-wrap{grid-template-columns:minmax(0,1fr)}
+.ct-aside{position:static}
+.ct-reasons-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ct-sedi{grid-template-columns:minmax(0,1fr)}
+.ct-links{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+.grid2{grid-template-columns:minmax(0,1fr)}
+.grid2>.label{padding:24px 0 0}
+.grid2>.content{padding:12px 0 0;border-left:0}
+}
+@media (max-width:767px){
+html{scroll-padding-top:90px}
+.wrap{padding-left:20px;padding-right:20px}
+.ct-hero{padding:120px 0 40px}
+.sf-crumbs ol{margin-bottom:16px;font-size:13px}
+.ct-h1{font-size:40px;line-height:44px}
+.ct-lead{margin-top:20px;font-size:18px;line-height:28px}
+.ct-cta .pill{width:100%}
+.ct-direct{padding:24px}
+.ct-sec{padding-top:64px}
+.ct-intro{font-size:17px}
+.ct-form-wrap{margin-top:28px;gap:24px}
+.ct-box{padding:20px;border-radius:16px}
+.ct-reasons-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+.ct-reason{flex-direction:row;align-items:center;min-height:60px;padding:12px 16px;gap:14px}
+.ct-reason svg{width:28px;height:28px;flex:0 0 28px}
+.ct-form{grid-template-columns:minmax(0,1fr);gap:20px;margin-top:28px;padding-top:24px}
+.ct-actions .pill{width:100%}
+.ct-assist{padding:24px}
+.ct-assist h3{font-size:24px}
+.ct-assist-cta{flex-direction:column}
+.ct-assist-cta .pill{width:100%}
+.ct-recap>div{grid-template-columns:minmax(0,1fr);gap:4px}
+.ct-ok-cta .pill{width:100%}
+.ct-sedi{margin-top:28px;gap:12px}
+.ct-sede{padding:24px}
+.ct-sede address{font-size:18px;line-height:28px}
+.ct-map{min-height:360px}
+.ct-map-img{width:1300px}
+.ct-links{gap:12px;margin-top:28px}
+.ct-link{grid-template-columns:36px minmax(0,1fr);padding:20px;gap:16px}
+.ct-link svg.ct-li{width:36px;height:36px}
+.ct-round{display:none}
+.ct-end{height:64px}
+.sf-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:#1d1d1c;border-top:1px solid #4a4947}
+.sf-sticky .pill{display:flex;width:100%;min-height:52px}
+#servizi{padding-bottom:84px}
+}
+#contenuto [tabindex="-1"]:focus{outline:none}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script src="../js/morphdom.min.js"></script>
+<script src="../js/dc-lite.js"></script>
+<script>
+DCLite.define("Comp-Header", "<div class=\"cmp-head\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<a class=\"skip\" href=\"#contenuto\">Salta al contenuto<\/a>\n<header class=\"site-head\" onKeyDown=\"{{mnKey}}\">\n<div class=\"wrap bar\" style=\"display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 2px\">\n<a href=\"../home/\" aria-label=\"Gradus, home\"><img src=\"../img/e52b0b2830a177d91570dc5492c7bdab.svg\" alt=\"Gradus perfect baking\" style=\"display:block;height:34px;width:auto\" width=\"576\" height=\"87\" fetchpriority=\"high\"><\/a><nav class=\"mn-nav\" aria-label=\"Principale\"><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnSolExp}}\" aria-controls=\"mn-sol\" onClick=\"{{mnSolT}}\">Soluzioni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnForExp}}\" aria-controls=\"mn-for\" onClick=\"{{mnForT}}\">Forni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnAppExp}}\" aria-controls=\"mn-app\" onClick=\"{{mnAppT}}\">Applicazioni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnSerExp}}\" aria-controls=\"mn-ser\" onClick=\"{{mnSerT}}\">Servizi<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnGraExp}}\" aria-controls=\"mn-gra\" onClick=\"{{mnGraT}}\">Gradus<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/nav>\n\n<div style=\"display:flex; align-items:center; justify-content:flex-end; gap: 24px; font-size:14px; font-weight:600\">\n<span class=\"mn-lang\" style=\"display:flex;gap:12px\"><a href=\"#\" aria-current=\"true\" style=\"text-decoration:underline;text-decoration-color:#c2063a;text-underline-offset:6px;text-decoration-thickness:2px\" style-hover=\"text-shadow: 0.6px 0 0 #ffffff, -0.6px 0 0 #ffffff, 0 0 0.5px #ffffff\">IT<\/a><a href=\"#\" style=\"opacity:.75\" style-hover=\"text-shadow: 0.6px 0 0 #ffffff, -0.6px 0 0 #ffffff, 0 0 0.5px #ffffff\">EN<\/a><\/span>\n<a class=\"pill pill-red mn-cta\" href=\"../contatti/\" style=\"padding: 13px 26px; font-size: 14px; background: transparent; color: #ffffff; border-color: #D52F5D; border-width: 1.5px; border-style: solid\" style-hover=\"background: #ffffff; color: #c2063a; border-color: #ffffff\">Contatti<\/a><button class=\"mn-burger\" type=\"button\" aria-label=\"Apri il menu\" aria-expanded=\"{{mnMobExp}}\" aria-controls=\"mn-mob\" onClick=\"{{mnMobT}}\"><svg viewBox=\"0 0 24 24\" width=\"31\" height=\"26\" aria-hidden=\"true\" preserveAspectRatio=\"none\"><path d=\"M4 7h16M4 12h16M4 17h16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><\/path><\/svg><\/button>\n<\/div>\n<\/div>\n<sc-if value=\"{{mnAny}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-scrim\" onClick=\"{{mnClose}}\"><\/div><\/sc-if><sc-if value=\"{{mnSolOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-sol\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Soluzioni<\/small><p>Soluzioni per il tuo modo di lavorare<\/p><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../professionisti/\" onClick=\"{{mnClose}}\"><span>Professionisti<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catene/\" onClick=\"{{mnClose}}\"><span>Catene<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rivenditori/\" onClick=\"{{mnClose}}\"><span>Rivenditori<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnForOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-for\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Forni<\/small><p>Quattro famiglie di forni<\/p><a href=\"../forni/\" onClick=\"{{mnClose}}\">Vai a Forni<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../cratos/\" onClick=\"{{mnClose}}\"><span>CRATOS<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../jack/\" onClick=\"{{mnClose}}\"><span>JACK<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../modular/\" onClick=\"{{mnClose}}\"><span>MODULAR<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rotor/\" onClick=\"{{mnClose}}\"><span>ROTOR<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnAppOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-app\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Applicazioni<\/small><p>Il tuo settore, la nostra cottura<\/p><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../pizzeria/\" onClick=\"{{mnClose}}\"><span>Pizzeria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../panetteria/\" onClick=\"{{mnClose}}\"><span>Panetteria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../pasticceria/\" onClick=\"{{mnClose}}\"><span>Pasticceria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnSerOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-ser\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Servizi<\/small><p>Al tuo fianco dopo l’acquisto<\/p><a href=\"../servizi/\" onClick=\"{{mnClose}}\">Vai a Servizi<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../assistenza/\" onClick=\"{{mnClose}}\"><span>Assistenza<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catalogo/\" onClick=\"{{mnClose}}\"><span>Catalogo<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../gradus-point/\" onClick=\"{{mnClose}}\"><span>Gradus Point<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../faq/\" onClick=\"{{mnClose}}\"><span>FAQ<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnGraOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-gra\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Gradus<\/small><p>Chi siamo<\/p><a href=\"../gradus/\" onClick=\"{{mnClose}}\">Vai a Gradus<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../il-gruppo/\" onClick=\"{{mnClose}}\"><span>Il Gruppo<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../tecnologia-design/\" onClick=\"{{mnClose}}\"><span>Tecnologia &amp; Design<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../news/\" onClick=\"{{mnClose}}\"><span>News &amp; Eventi<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnMobOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-mob\" id=\"mn-mob\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\"><div class=\"mn-mob-hd\"><img src=\"../img/e52b0b2830a177d91570dc5492c7bdab.svg\" alt=\"Gradus perfect baking\" width=\"576\" height=\"87\" loading=\"lazy\" decoding=\"async\"><button type=\"button\" aria-label=\"Chiudi il menu\" onClick=\"{{mnMobT}}\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><\/path><\/svg><\/button><\/div><sc-if value=\"{{mnLvRoot}}\" hint-placeholder-val=\"{{ true }}\"><ul class=\"mn-lv1\"><li><button type=\"button\" onClick=\"{{mnSolGo}}\">Soluzioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnForGo}}\">Forni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnAppGo}}\">Applicazioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnSerGo}}\">Servizi<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnGraGo}}\">Gradus<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><\/ul><\/sc-if><sc-if value=\"{{mnSolLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Soluzioni<\/p><ul class=\"mn-lv1\"><li><a href=\"../professionisti/\" onClick=\"{{mnCloseAll}}\">Professionisti<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catene/\" onClick=\"{{mnCloseAll}}\">Catene<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rivenditori/\" onClick=\"{{mnCloseAll}}\">Rivenditori<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnForLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Forni<\/p><a class=\"mn-lv2-all\" href=\"../forni/\" onClick=\"{{mnCloseAll}}\">Vai a Forni<\/a><ul class=\"mn-lv1\"><li><a href=\"../cratos/\" onClick=\"{{mnCloseAll}}\">CRATOS<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../jack/\" onClick=\"{{mnCloseAll}}\">JACK<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../modular/\" onClick=\"{{mnCloseAll}}\">MODULAR<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rotor/\" onClick=\"{{mnCloseAll}}\">ROTOR<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnAppLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Applicazioni<\/p><ul class=\"mn-lv1\"><li><a href=\"../pizzeria/\" onClick=\"{{mnCloseAll}}\">Pizzeria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../panetteria/\" onClick=\"{{mnCloseAll}}\">Panetteria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../pasticceria/\" onClick=\"{{mnCloseAll}}\">Pasticceria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnSerLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Servizi<\/p><a class=\"mn-lv2-all\" href=\"../servizi/\" onClick=\"{{mnCloseAll}}\">Vai a Servizi<\/a><ul class=\"mn-lv1\"><li><a href=\"../assistenza/\" onClick=\"{{mnCloseAll}}\">Assistenza<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catalogo/\" onClick=\"{{mnCloseAll}}\">Catalogo<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../gradus-point/\" onClick=\"{{mnCloseAll}}\">Gradus Point<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../faq/\" onClick=\"{{mnCloseAll}}\">FAQ<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnGraLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Gradus<\/p><a class=\"mn-lv2-all\" href=\"../gradus/\" onClick=\"{{mnCloseAll}}\">Vai a Gradus<\/a><ul class=\"mn-lv1\"><li><a href=\"../il-gruppo/\" onClick=\"{{mnCloseAll}}\">Il Gruppo<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../tecnologia-design/\" onClick=\"{{mnCloseAll}}\">Tecnologia &amp; Design<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../news/\" onClick=\"{{mnCloseAll}}\">News &amp; Eventi<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><div class=\"mn-foot\"><div class=\"mn-meta\"><span>+39 0722 354048<\/span><span><a href=\"#\" aria-current=\"true\">IT<\/a><a href=\"#\">EN<\/a><\/span><\/div><a class=\"pill pill-red\" href=\"../contatti/\" onClick=\"{{mnCloseAll}}\">Contattaci<\/a><\/div><\/div><\/sc-if><\/header>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { mnOpen: null, mnMob: false, mnLv: null }; }
+// position:sticky funziona solo se il genitore diretto è alto quanto la pagina: se il motore avvolge il componente in un contenitore alto quanto l'header, quel contenitore diventa trasparente al layout (display: contents)
+fixSticky() {
+const doc = typeof document !== 'undefined' ? document : null; if (!doc) return;
+doc.querySelectorAll('.site-head').forEach((el) => {
+let p = el.parentElement;
+while (p && p !== doc.body && p !== doc.documentElement) {
+const cs = doc.defaultView.getComputedStyle(p);
+if (cs.display === 'contents') { p = p.parentElement; continue; }
+if (p.offsetHeight <= el.offsetHeight + 4) { p.style.setProperty('display', 'contents', 'important'); p = p.parentElement; continue; }
+break;
+}
+});
+}
+componentDidMount() { this.fixSticky(); this._fx = [300, 1000, 2500].map((t) => setTimeout(() => this.fixSticky(), t)); }
+componentDidUpdate() { this.fixSticky(); }
+componentWillUnmount() { (this._fx || []).forEach(clearTimeout); }
+renderVals() {
+const mo = this.state.mnOpen, ml = this.state.mnLv;
+const t = (k) => () => this.setState({ mnOpen: mo === k ? null : k });
+const go = (k) => () => this.setState({ mnLv: k });
+return {
+mnSolOpen: mo === 'sol', mnSolExp: mo === 'sol' ? 'true' : 'false', mnSolT: t('sol'), mnSolLv: ml === 'sol', mnSolGo: go('sol'),
+mnForOpen: mo === 'for', mnForExp: mo === 'for' ? 'true' : 'false', mnForT: t('for'), mnForLv: ml === 'for', mnForGo: go('for'),
+mnAppOpen: mo === 'app', mnAppExp: mo === 'app' ? 'true' : 'false', mnAppT: t('app'), mnAppLv: ml === 'app', mnAppGo: go('app'),
+mnSerOpen: mo === 'ser', mnSerExp: mo === 'ser' ? 'true' : 'false', mnSerT: t('ser'), mnSerLv: ml === 'ser', mnSerGo: go('ser'),
+mnGraOpen: mo === 'gra', mnGraExp: mo === 'gra' ? 'true' : 'false', mnGraT: t('gra'), mnGraLv: ml === 'gra', mnGraGo: go('gra'),
+mnAny: mo !== null,
+mnClose: () => this.setState({ mnOpen: null }),
+mnMobOpen: this.state.mnMob,
+mnMobExp: this.state.mnMob ? 'true' : 'false',
+mnMobT: () => this.setState({ mnMob: !this.state.mnMob, mnLv: null }),
+mnLvRoot: ml === null,
+mnBack: () => this.setState({ mnLv: null }),
+mnCloseAll: () => this.setState({ mnOpen: null, mnMob: false, mnLv: null }),
+mnKey: (e) => { if (e.key === 'Escape') this.setState({ mnOpen: null, mnMob: false, mnLv: null }); }
+};
+}
+}
+
+return Component;
+});
+DCLite.define("Comp-Footer", "<div class=\"cmp-foot\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<footer id=\"servizi\" class=\"reveal\" style=\"background:#141413;color:#c9ccce\">\n<div class=\"wrap\" style=\"padding-top:72px;padding-bottom:40px;display:flex;flex-direction:column;gap:56px\">\n<div class=\"grid2\" style=\"border-top:0\">\n<div class=\"label\" style=\"display:flex;flex-direction:column;gap:20px;padding-top:0\">\n<img src=\"../img/ebc5345931cee1e93e55b13867c2ad7e.svg\" alt=\"Gradus\" style=\"display:block;height:20px;width:auto;align-self:flex-start\" width=\"576\" height=\"44\" loading=\"lazy\" decoding=\"async\">\n<p style=\"margin:0;font-size:14px;line-height:1.7;font-weight:400\">Gradus / Resto Italia<br>Via dell’Industria, 23, Loc. Canavaccio<br>61029 Urbino (PU), Italia<\/p>\n<p style=\"margin:0;font-size:14px;line-height:1.7;font-weight:400\">Tel. +39 0722 354048<br>info@restoitalia.com<\/p>\n<\/div>\n<div class=\"content ft-cols\" style=\"display: flex; flex-wrap: wrap; gap: 40px 72px; font-size: 15px; padding-top: 0; justify-content: flex-end; border-style: none\">\n<div class=\"ft-col\"><a class=\"ft-h ft-hl\" href=\"../forni/\">Prodotti<\/a><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftPExp}}\" aria-controls=\"ft-P\" onClick=\"{{ftPT}}\">Prodotti<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-P\" data-open=\"{{ftPExp}}\"><a class=\"ft-all\" href=\"../forni/\">Tutti i forni<\/a><a href=\"../cratos/\">CRATOS<\/a><a href=\"../jack/\">JACK<\/a><a href=\"../modular/\">MODULAR<\/a><a href=\"../rotor/\">ROTOR<\/a><\/div><\/div>\n<div class=\"ft-col\"><b class=\"ft-h\">Azienda<\/b><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftAExp}}\" aria-controls=\"ft-A\" onClick=\"{{ftAT}}\">Azienda<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-A\" data-open=\"{{ftAExp}}\"><a href=\"../il-gruppo/\">Il Gruppo<\/a><a href=\"../tecnologia-design/\">Tecnologia &amp; Design<\/a><a href=\"../news/\">News &amp; Eventi<\/a><a href=\"../servizi/\">Servizi<\/a><a href=\"../contatti/\">Contatti<\/a><\/div><\/div>\n<div class=\"ft-col\"><b class=\"ft-h\">Informazioni<\/b><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftIExp}}\" aria-controls=\"ft-I\" onClick=\"{{ftIT}}\">Informazioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-I\" data-open=\"{{ftIExp}}\"><a href=\"../contatti/#sedi\">Recapiti e sedi<\/a><a href=\"#\">Privacy<\/a><a href=\"#\">Cookie<\/a><a href=\"#\">Preferenze cookie<\/a><\/div><\/div>\n<\/div>\n<\/div>\n<div style=\"border-top:1px solid rgba(255,255,255,.16);padding-top:24px;font-size:13px;line-height:1.6;color:#c9ccce;display:flex;flex-direction:column;gap:6px\">\n<span>© Resto Italia, P.IVA 01444690414<\/span>\n<span>[Informazioni aziendali e legali da completare con i dati ufficiali]<\/span>\n<\/div>\n<\/div>\n<\/footer>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { ft: null }; }
+renderVals() {
+const ft = this.state.ft, t = (k) => () => this.setState({ ft: ft === k ? null : k });
+return {
+ftPExp: ft === 'P' ? 'true' : 'false', ftPT: t('P'),
+ftAExp: ft === 'A' ? 'true' : 'false', ftAT: t('A'),
+ftIExp: ft === 'I' ? 'true' : 'false', ftIT: t('I')
+};
+}
+}
+
+return Component;
+});
+DCLite.define("Contatti", "<div style=\"min-width:320px;background:#1d1d1c;color:#fff;font-family:'Montserrat',system-ui,sans-serif\">\n\n<dc-import name=\"Comp-Header\" style=\"display: contents\" hint-size=\"100%,81px\"><\/dc-import>\n<main id=\"contenuto\">\n\n<!-- 20 CONTATTI -->\n<section class=\"ct-hero\" aria-labelledby=\"ct-titolo\">\n<div class=\"wrap ct-hero-in\">\n<div>\n<nav class=\"sf-crumbs\" aria-label=\"Percorso\"><ol><li><a href=\"../home/\">Home<\/a><\/li><li><span aria-current=\"page\">Contatti<\/span><\/li><\/ol><\/nav>\n<h1 class=\"ct-h1\" id=\"ct-titolo\">Parliamo della tua esigenza.<\/h1>\n<p class=\"ct-lead\">Scegli il motivo del contatto e scrivi al team Gradus: ti risponde la persona giusta.<\/p>\n<div class=\"ct-cta\"><a class=\"pill pill-red\" href=\"#modulo\" onClick=\"{{goSez}}\">Scrivici<\/a><a class=\"pill pill-line\" href=\"#sedi\" onClick=\"{{goSez}}\">Recapiti e sedi<\/a><\/div>\n<\/div>\n<aside class=\"ct-direct\" aria-labelledby=\"t-diretti\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\">\n<h2 id=\"t-diretti\">Contatti diretti<\/h2>\n<dl>\n<div><svg class=\"ct-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><circle cx=\"18\" cy=\"6\" r=\"2.5\" fill=\"#D2003C\"><\/circle><\/svg><div><dt>Telefono<\/dt><dd><a class=\"lnk\" href=\"tel:+390722354048\">+39 0722 354048<\/a><\/dd><\/div><\/div>\n<div><svg class=\"ct-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"><\/rect><path d=\"M3 7l9 6 9-6\" fill=\"none\" stroke=\"#D2003C\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><\/svg><div><dt>Email<\/dt><dd>info@fornigradus.it<\/dd><\/div><\/div>\n<div><svg class=\"ct-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\"><\/circle><path d=\"M12 7v5l3 2\" fill=\"none\" stroke=\"#D2003C\" stroke-width=\"2\" stroke-linecap=\"round\"><\/path><\/svg><div><dt>Orari<\/dt><dd>Lun-Ven: 08:30-12:30 14:00-18:00<\/dd><\/div><\/div>\n<\/dl>\n<\/aside>\n<\/div>\n<\/section>\n\n<!-- MODULO -->\n<section class=\"ct-sec reveal\" id=\"modulo\" aria-labelledby=\"t-modulo\" style=\"padding-top:24px\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Scrivici<\/div><div class=\"content\"><h2 class=\"ct-h2\" id=\"t-modulo\">Di cosa hai bisogno?<\/h2><p class=\"ct-intro\">Scegli il motivo: il modulo ti chiede solo quello che serve, e la richiesta arriva alla persona giusta.<\/p><\/div><\/div>\n<div class=\"ct-form-wrap\">\n<div class=\"ct-aside\">\n<ol class=\"ct-steps\" aria-label=\"Come funziona\">\n<li>Scegli il motivo e compili la richiesta.<\/li>\n<li>La richiesta arriva al reparto giusto: commerciale, catene o rivenditori.<\/li>\n<li>Il team Gradus ti ricontatta all’email o al telefono che indichi.<\/li>\n<\/ol>\n<p class=\"ct-hint\">Ti serve un tecnico? Usa la richiesta di assistenza: arriva direttamente al reparto tecnico.<\/p>\n<\/div>\n\n<div class=\"ct-box\" aria-live=\"polite\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\">\n<sc-if value=\"{{inForm}}\" hint-placeholder-val=\"{{ true }}\">\n<fieldset class=\"ct-reasons\">\n<legend>Motivo del contatto<\/legend>\n<div class=\"ct-reasons-grid\">\n<sc-for list=\"{{motivi}}\" as=\"m\" hint-placeholder-count=\"5\"><label class=\"ct-reason\" data-on=\"{{m.on}}\"><input type=\"radio\" name=\"motivo\" value=\"{{m.id}}\" checked=\"{{m.checked}}\" onChange=\"{{m.pick}}\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\"><path d=\"{{m.d1}}\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><path d=\"{{m.d2}}\" fill=\"none\" stroke=\"#D2003C\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><b>{{m.label}}<\/b><\/label><\/sc-for>\n<\/div>\n<\/fieldset>\n\n<sc-if value=\"{{isAssist}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"ct-assist\">\n<h3>Per l’assistenza tecnica c’è un modulo dedicato.<\/h3>\n<p>Ti chiede modello, matricola e stato del forno, e arriva direttamente al reparto tecnico. Se il forno è fermo, chiamaci.<\/p>\n<div class=\"ct-assist-cta\"><a class=\"pill pill-white\" href=\"../assistenza/#modulo-assistenza\">Richiedi assistenza<\/a><a class=\"pill pill-line\" href=\"tel:+390722354048\">+39 0722 354048<\/a><\/div>\n<\/div>\n<\/sc-if>\n\n<sc-if value=\"{{showForm}}\" hint-placeholder-val=\"{{ true }}\">\n<form class=\"ct-form\" novalidate=\"\" onSubmit=\"{{submit}}\">\n<input type=\"hidden\" name=\"provenienza\" value=\"{{provenienza}}\">\n<sc-if value=\"{{hasProv}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-for\">Arrivi da <b>{{provLabel}}<\/b>: abbiamo già compilato il motivo{{provForno}}.<\/p><\/sc-if>\n<sc-if value=\"{{sendErr}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"ct-alert\" role=\"alert\"><div><b>Invio non riuscito<\/b><p>La richiesta non è partita per un problema di connessione. I dati sono ancora qui: riprova tra qualche istante, oppure chiamaci.<\/p><\/div><\/div><\/sc-if>\n\n<div class=\"ct-f\"><label for=\"ct-nome\">Nome e cognome<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"ct-in\" id=\"ct-nome\" name=\"nome\" type=\"text\" required=\"\" autocomplete=\"name\" aria-invalid=\"{{nomeInv}}\" aria-describedby=\"ct-nome-err\" onBlur=\"{{blurNome}}\"><sc-if value=\"{{nomeOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-nome-err\">{{nomeMsg}}<\/p><\/sc-if><\/div>\n<div class=\"ct-f\"><label for=\"ct-email\">Email<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"ct-in\" id=\"ct-email\" name=\"email\" type=\"email\" required=\"\" autocomplete=\"email\" inputmode=\"email\" aria-invalid=\"{{emailInv}}\" aria-describedby=\"ct-email-err\" onBlur=\"{{blurEmail}}\"><sc-if value=\"{{emailOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-email-err\">{{emailMsg}}<\/p><\/sc-if><\/div>\n\n<sc-if value=\"{{isRiv}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"ct-f\"><label for=\"ct-az-r\">Azienda<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"ct-in\" id=\"ct-az-r\" name=\"azienda\" type=\"text\" required=\"\" autocomplete=\"organization\" aria-invalid=\"{{aziendaInv}}\" aria-describedby=\"ct-az-err\" onBlur=\"{{blurAzienda}}\"><sc-if value=\"{{aziendaOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-az-err\">{{aziendaMsg}}<\/p><\/sc-if><\/div>\n<\/sc-if>\n<sc-if value=\"{{notRiv}}\" hint-placeholder-val=\"{{ true }}\">\n<div class=\"ct-f\"><label for=\"ct-az\">Azienda o locale<span class=\"ct-opt\"> (facoltativo)<\/span><\/label><input class=\"ct-in\" id=\"ct-az\" name=\"azienda\" type=\"text\" autocomplete=\"organization\"><\/div>\n<\/sc-if>\n<div class=\"ct-f\"><label for=\"ct-tel\">Telefono<span class=\"ct-opt\"> (facoltativo)<\/span><\/label><input class=\"ct-in\" id=\"ct-tel\" name=\"telefono\" type=\"tel\" autocomplete=\"tel\" inputmode=\"tel\"><\/div>\n\n<sc-if value=\"{{isForno}}\" hint-placeholder-val=\"{{ true }}\">\n<div class=\"ct-f\"><label for=\"ct-prof\">La tua attività<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><select class=\"ct-in\" id=\"ct-prof\" name=\"profilo\" required=\"\" aria-invalid=\"{{profiloInv}}\" aria-describedby=\"ct-prof-err\" onBlur=\"{{blurProfilo}}\" onChange=\"{{blurProfilo}}\"><option value=\"\">Scegli<\/option><option>Pizzeria<\/option><option>Panetteria<\/option><option>Pasticceria<\/option><option>Ristorante o hotel<\/option><option>Altro<\/option><\/select><sc-if value=\"{{profiloOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-prof-err\">{{profiloMsg}}<\/p><\/sc-if><\/div>\n<div class=\"ct-f\"><label for=\"ct-forno\">Forno che ti interessa<span class=\"ct-opt\"> (facoltativo)<\/span><\/label><select class=\"ct-in\" id=\"ct-forno\" name=\"forno\"><option value=\"\">Non so ancora<\/option><option value=\"CRATOS\" selected=\"{{selCratos}}\">CRATOS<\/option><option value=\"JACK\" selected=\"{{selJack}}\">JACK<\/option><option value=\"MODULAR\" selected=\"{{selModular}}\">MODULAR<\/option><option value=\"ROTOR\" selected=\"{{selRotor}}\">ROTOR<\/option><\/select><\/div>\n<\/sc-if>\n\n<sc-if value=\"{{isCatene}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"ct-f\"><label for=\"ct-pv\">Punti vendita della rete<span class=\"ct-opt\"> (facoltativo)<\/span><\/label><select class=\"ct-in\" id=\"ct-pv\" name=\"punti_vendita\"><option value=\"\">Scegli<\/option><option>Da 2 a 5<\/option><option>Da 6 a 20<\/option><option>Più di 20<\/option><option>Rete in avvio<\/option><\/select><\/div>\n<div class=\"ct-f\"><label for=\"ct-tempi\">Prossime aperture<span class=\"ct-opt\"> (facoltativo)<\/span><\/label><select class=\"ct-in\" id=\"ct-tempi\" name=\"tempi\"><option value=\"\">Scegli<\/option><option>Entro 6 mesi<\/option><option>Tra 6 e 12 mesi<\/option><option>Oltre 12 mesi<\/option><option>Da definire<\/option><\/select><\/div>\n<\/sc-if>\n\n<sc-if value=\"{{isRiv}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"ct-f\"><label for=\"ct-zona\">Zona di vendita<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"ct-in\" id=\"ct-zona\" name=\"zona\" type=\"text\" required=\"\" aria-invalid=\"{{zonaInv}}\" aria-describedby=\"ct-zona-hint ct-zona-err\" onBlur=\"{{blurZona}}\"><p class=\"ct-hint\" id=\"ct-zona-hint\">Per esempio: Lombardia, oppure Nord Italia e Svizzera.<\/p><sc-if value=\"{{zonaOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-zona-err\">{{zonaMsg}}<\/p><\/sc-if><\/div>\n<\/sc-if>\n\n<div class=\"ct-f ct-f--full\"><label for=\"ct-msg\">Messaggio<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><textarea class=\"ct-in\" id=\"ct-msg\" name=\"messaggio\" rows=\"5\" required=\"\" aria-invalid=\"{{msgInv}}\" aria-describedby=\"ct-msg-hint ct-msg-err\" onBlur=\"{{blurMsg}}\"><\/textarea><p class=\"ct-hint\" id=\"ct-msg-hint\">{{msgHint}}<\/p><sc-if value=\"{{msgOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-msg-err\">{{msgMsg}}<\/p><\/sc-if><\/div>\n\n<div class=\"ct-check\"><input type=\"checkbox\" id=\"ct-priv\" name=\"privacy\" required=\"\" aria-invalid=\"{{privInv}}\" aria-describedby=\"ct-priv-err\" onChange=\"{{blurPriv}}\"><label for=\"ct-priv\">Ho letto l’<a class=\"lnk\" href=\"#\">informativa privacy<\/a> e acconsento al trattamento dei dati per ricevere una risposta.<span class=\"ct-star\" aria-hidden=\"true\"> *<\/span><\/label><sc-if value=\"{{privOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"ct-err\" id=\"ct-priv-err\">{{privMsg}}<\/p><\/sc-if><\/div>\n<div class=\"ct-check\"><input type=\"checkbox\" id=\"ct-mkt\" name=\"marketing\"><label for=\"ct-mkt\">Voglio ricevere novità su prodotti ed eventi Gradus. Facoltativo, puoi cancellarti quando vuoi.<\/label><\/div>\n\n<div class=\"ct-actions\"><p class=\"ct-req-note\">* Campi obbligatori<\/p><button class=\"pill pill-red\" type=\"submit\">Invia la richiesta<\/button><\/div>\n<\/form>\n<\/sc-if>\n<\/sc-if>\n\n<sc-if value=\"{{sent}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"ct-ok\">\n<span class=\"ct-ok-badge\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"#3fbf82\"><\/circle><path d=\"M7 12.5l3.2 3L17 9\" fill=\"none\" stroke=\"#12331f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Completato<\/span>\n<h3>Richiesta inviata.<\/h3>\n<p>Il team Gradus ti ricontatta all’indirizzo che hai indicato. Ecco il riepilogo di quello che ci hai scritto.<\/p>\n<dl class=\"ct-recap\">\n<sc-for list=\"{{recap}}\" as=\"r\" hint-placeholder-count=\"4\"><div><dt>{{r.k}}<\/dt><dd>{{r.v}}<\/dd><\/div><\/sc-for>\n<\/dl>\n<div class=\"ct-ok-cta\"><a class=\"pill pill-white\" href=\"../forni/\">Scopri i forni<\/a><button class=\"pill pill-line\" type=\"button\" onClick=\"{{reset}}\">Invia un’altra richiesta<\/button><\/div>\n<\/div>\n<\/sc-if>\n<\/div>\n<\/div>\n<\/div>\n<\/section>\n\n<!-- RECAPITI E SEDI -->\n<section class=\"ct-sec reveal\" id=\"sedi\" aria-labelledby=\"t-sedi\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Recapiti e sedi<\/div><div class=\"content\"><h2 class=\"ct-h2\" id=\"t-sedi\">A Canavaccio di Urbino, nelle Marche.<\/h2><\/div><\/div>\n<div class=\"ct-sedi\">\n<div class=\"ct-sedi-l\">\n<div class=\"ct-sede\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\"><h3>Sede operativa<\/h3><address>Via dell’Industria 23<br>Loc. Canavaccio, 61029 Urbino (PU)<\/address><p>Telefono <a class=\"lnk\" href=\"tel:+390722354048\">+39 0722 354048<\/a> · Fax +39 0722 354049<\/p><a class=\"lnk\" href=\"https://www.google.com/maps/search/?api=1&amp;query=Via%20dell%27Industria%2023%2C%20Canavaccio%2C%20Urbino\">Apri le indicazioni<\/a><\/div>\n<div class=\"ct-sede\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\"><h3>Sede legale<\/h3><address>Via del Lavoro 4<br>Loc. Canavaccio, 61029 Urbino (PU)<\/address><p>[Ragione sociale] · P. IVA [da confermare]<\/p><a class=\"lnk\" href=\"https://www.google.com/maps/search/?api=1&amp;query=Via%20del%20Lavoro%204%2C%20Canavaccio%2C%20Urbino\">Apri le indicazioni<\/a><\/div>\n<\/div>\n<div class=\"ct-map\" role=\"img\" aria-label=\"Mappa: la sede Gradus a Canavaccio di Urbino, tra Pesaro e Urbino\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\">\n<img class=\"ct-map-img\" src=\"../img/e7cc45f89700473807a6a78d200f3b54.webp\" alt=\"\" width=\"2000\" height=\"2360\" loading=\"lazy\" decoding=\"async\">\n<div class=\"ct-mk\" aria-hidden=\"true\"><span class=\"ct-mk-l\">Gradus<small>Canavaccio, Urbino<\/small><\/span><svg viewBox=\"0 0 24 36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z\" fill=\"#D2003C\" stroke=\"#fff\" stroke-width=\"1.2\"><\/path><path transform=\"translate(4.8 7.1) scale(.197)\" fill=\"#fff\" d=\"M24.65,19.54c0-1.18.61-1.73,1.77-1.730,11.58,0,23.17-.07,34.75.05,6.02.07,11.23,4.94,12.29,11.06.97,5.63-2.34,11.910-7.67,14.020-1.88.75-4.02,1.2-6.04,1.21-12.58.11-25.16.07-37.74.04-9.99-.02-17.71-5.040-20.75-14.52C-2.07,19.26,1.08,7.56,12.44,2.13,15.43.71,18.63.25,21.930.26c7.6.03,15.2,0,22.81,0h24.98c2.22,0,2.54.31,2.53,2.49,0,.95.09,1.92-.1,2.83-.45,2.15-2.19,3.45-4.56,3.48-3.17.03-6.330,0-9.5,0H21.17c-6.35,0-10.99,3.04-12.36,9.21-1.45,6.54-.41,12.98,7.47,16.3,1.41.59,3.08.76,4.64.77,13.17.06,26.33.04,39.5.03,2.39,0,4.06-1.05,4.76-2.88.67-1.75-.03-4.32-1.79-5.56-.82-.57-1.99-.89-3-.91-7.15-.08-14.3-.04-21.45-.04-3.08,0-6.15-.02-9.23,0-3.19.03-5.22-1.89-5.06-5.1v-1.35h0Z\"><\/path><\/svg><\/div>\n<p class=\"ct-map-note\">Anteprima statica · sul sito: mappa interattiva © OpenStreetMap © CARTO<\/p>\n<\/div>\n<\/div>\n\n<ul class=\"ct-links\" aria-label=\"Altre risposte\">\n<li><a class=\"ct-link\" href=\"../faq/\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\"><svg class=\"ct-li\" viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M8 12a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H20l-8 7v-7a4 4 0 0 1-4-4z\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><path d=\"M20 16.5a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.1-1.5 2v.6\" fill=\"none\" stroke=\"#D2003C\" stroke-width=\"2.2\" stroke-linecap=\"round\"><\/path><circle cx=\"24\" cy=\"27\" r=\"1.4\" fill=\"#D2003C\"><\/circle><\/svg><span><b>FAQ<\/b><small>Le risposte alle domande più frequenti.<\/small><\/span><span class=\"ct-round\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a class=\"ct-link\" href=\"../catalogo/\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\"><svg class=\"ct-li\" viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M8 10h13a3 3 0 0 1 3 3v27a3 3 0 0 0-3-3H8zM40 10H27a3 3 0 0 0-3 3v27a3 3 0 0 1 3-3h13z\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><path d=\"M32 22v8M28.5 26.5L32 30l3.5-3.5\" fill=\"none\" stroke=\"#D2003C\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><span><b>Catalogo<\/b><small>Il catalogo Gradus 2027, da scaricare.<\/small><\/span><span class=\"ct-round\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a class=\"ct-link\" href=\"../gradus-point/\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\"><svg class=\"ct-li\" viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path d=\"M24 42s-13-12-13-22a13 13 0 0 1 26 0c0 10-13 22-13 22z\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><circle cx=\"24\" cy=\"20\" r=\"5\" fill=\"#D2003C\"><\/circle><\/svg><span><b>Gradus Point<\/b><small>Il centro autorizzato più vicino a te.<\/small><\/span><span class=\"ct-round\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<div class=\"ct-end\"><\/div>\n<\/div>\n<\/section>\n<\/main>\n<div class=\"sf-sticky\"><a class=\"pill pill-red\" href=\"tel:+390722354048\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"><\/path><\/svg><span>Chiama Gradus<\/span><\/a><\/div>\n\n<dc-import name=\"Comp-Footer\" style=\"display: contents\" hint-size=\"100%,420px\"><\/dc-import>\n\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+const p = props.provenienza;
+const m = p === 'pagina Catene' ? 'catene' : p === 'pagina Rivenditori' ? 'rivenditore' : 'forno';
+this.state = { motivo: m, err: {}, sent: false, data: null, tried: false };
+}
+componentDidUpdate(prev) {
+if (prev.provenienza !== this.props.provenienza) {
+const p = this.props.provenienza;
+this.setState({ motivo: p === 'pagina Catene' ? 'catene' : p === 'pagina Rivenditori' ? 'rivenditore' : 'forno', err: {}, sent: false, tried: false });
+}
+}
+check(f, v) {
+const t = String(v == null ? '' : v).trim();
+if (f === 'nome' && !t) return 'Scrivi nome e cognome.';
+if (f === 'email') { if (!t) return 'Scrivi la tua email.'; if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(t)) return 'Inserisci un indirizzo email completo, per esempio nome@azienda.it.'; }
+if (f === 'azienda' && !t) return 'Scrivi il nome della tua azienda.';
+if (f === 'zona' && !t) return 'Indica la zona in cui vendi.';
+if (f === 'profilo' && !t) return 'Scegli il tipo di attività.';
+if (f === 'msg' && !t) return 'Scrivi in poche righe di cosa hai bisogno.';
+if (f === 'priv' && !v) return 'Per inviare la richiesta serve il consenso al trattamento dei dati.';
+return '';
+}
+onBlur(f) {
+return (e) => {
+const t = e.target, v = t.type === 'checkbox' ? t.checked : t.value;
+const cur = this.state.err[f] || '';
+if (!cur && !String(v).trim() && t.type !== 'checkbox' && t.tagName !== 'SELECT') return;
+const msg = this.check(f, v);
+if (msg !== cur) this.setState({ err: Object.assign({}, this.state.err, { [f]: msg }) });
+};
+}
+submit(e) {
+e.preventDefault();
+const form = e.currentTarget, el = form.elements, m = this.state.motivo;
+const get = (n) => (el[n] ? (el[n].type === 'checkbox' ? el[n].checked : el[n].value) : '');
+const fields = ['nome', 'email'];
+if (m === 'rivenditore') fields.push('azienda', 'zona');
+if (m === 'forno') fields.push('profilo');
+fields.push('msg', 'priv');
+const names = { msg: 'messaggio', priv: 'privacy', profilo: 'profilo' };
+const err = {}; fields.forEach((f) => { err[f] = this.check(f, get(names[f] || f)); });
+const first = fields.find((f) => err[f]);
+if (first) {
+this.setState({ err, tried: true });
+const ids = { nome: 'ct-nome', email: 'ct-email', azienda: 'ct-az-r', zona: 'ct-zona', profilo: 'ct-prof', msg: 'ct-msg', priv: 'ct-priv' };
+const x = form.querySelector('#' + ids[first]); if (x) x.focus();
+return;
+}
+if (this.props.errore_invio) { this.setState({ err: {}, tried: true, failed: true }); return; }
+const lab = { forno: 'Informazioni o preventivo', catene: 'Catene e franchising', rivenditore: 'Diventare rivenditore', altro: 'Altro' };
+const recap = [{ k: 'Motivo', v: lab[m] }, { k: 'Nome', v: get('nome') }, { k: 'Email', v: get('email') }];
+if (get('azienda')) recap.push({ k: 'Azienda', v: get('azienda') });
+if (get('telefono')) recap.push({ k: 'Telefono', v: get('telefono') });
+if (m === 'forno') { recap.push({ k: 'Attività', v: get('profilo') }); recap.push({ k: 'Forno', v: get('forno') || 'Non so ancora' }); }
+if (m === 'catene') { if (get('punti_vendita')) recap.push({ k: 'Punti vendita', v: get('punti_vendita') }); if (get('tempi')) recap.push({ k: 'Prossime aperture', v: get('tempi') }); }
+if (m === 'rivenditore') recap.push({ k: 'Zona di vendita', v: get('zona') });
+recap.push({ k: 'Messaggio', v: get('messaggio') });
+this.setState({ sent: true, data: recap, err: {}, failed: false });
+const doc = form.ownerDocument, box = doc.getElementById('modulo');
+if (box && box.scrollIntoView) box.scrollIntoView({ block: 'start' });
+}
+renderVals() {
+const s = this.state, e = s.err || {}, m = s.motivo, p = this.props.provenienza || 'nessuna';
+const ico = {
+forno: ['M5 26V12l11-6 11 6v14zM5 26h22', 'M11 26v-7h10v7M14 22h4'],
+catene: ['M4 27V14l6-4 6 4v13M16 27V14l6-4 6 4v13M2 27h28', 'M8 20h4M20 20h4'],
+rivenditore: ['M6 13l10-6 10 6M8 13v12h16V13', 'M12 19h8M16 15v8'],
+assistenza: ['M20 5a7 7 0 0 0-7 9L5 22a3 3 0 0 0 4 4l8-8a7 7 0 0 0 9-7l-5 4-4-1-1-4z', 'M7.5 24.5h.01'],
+altro: ['M6 9a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-9l-6 5v-5a3 3 0 0 1-2-3z', 'M11 14h.01M16 14h.01M21 14h.01']
+};
+const motivi = [['forno', 'Informazioni o preventivo'], ['catene', 'Catene e franchising'], ['rivenditore', 'Diventare rivenditore'], ['assistenza', 'Assistenza tecnica'], ['altro', 'Altro']].map(([id, label]) => ({
+id, label, on: m === id ? 'true' : 'false', checked: m === id, d1: ico[id][0], d2: ico[id][1],
+pick: () => this.setState({ motivo: id, err: {}, failed: false })
+}));
+const fe = (k) => ({ [k + 'On']: !!e[k], [k + 'Msg']: e[k] || '', [k + 'Inv']: e[k] ? 'true' : 'false' });
+const hints = { forno: 'Per esempio: cosa produci, quanti pezzi nelle ore di punta, lo spazio a disposizione.', catene: 'Per esempio: il prodotto, il format dei punti vendita, i volumi di servizio.', rivenditore: 'Per esempio: da quanto vendi attrezzature e a quali clienti.', altro: 'Scrivi in poche righe di cosa hai bisogno.', assistenza: '' };
+const fromCratos = p === 'scheda CRATOS';
+return Object.assign({
+motivi,
+inForm: !s.sent, sent: !!s.sent, recap: s.data || [],
+isAssist: m === 'assistenza', showForm: m !== 'assistenza',
+isForno: m === 'forno', isCatene: m === 'catene', isRiv: m === 'rivenditore', notRiv: m !== 'rivenditore',
+hasProv: p !== 'nessuna', provenienza: p, provLabel: p === 'nessuna' ? '' : 'dalla ' + p, provForno: fromCratos ? ' e il forno' : '',
+selCratos: fromCratos, selJack: false, selModular: false, selRotor: false,
+sendErr: !!s.failed,
+msgHint: hints[m] || '',
+blurNome: this.onBlur('nome'), blurEmail: this.onBlur('email'), blurAzienda: this.onBlur('azienda'), blurZona: this.onBlur('zona'), blurProfilo: this.onBlur('profilo'), blurMsg: this.onBlur('msg'), blurPriv: this.onBlur('priv'),
+submit: (ev) => this.submit(ev),
+reset: () => this.setState({ sent: false, data: null, err: {}, failed: false }),
+goSez: (ev) => {
+const a = ev.currentTarget, id = (a.getAttribute('href') || '').slice(1), doc = a.ownerDocument, el = id && doc.getElementById(id);
+if (!el) return; ev.preventDefault();
+const win = doc.defaultView, head = doc.querySelector('.site-head'), off = 16 + (head ? head.offsetHeight : 0);
+let box = el.parentElement;
+while (box && box !== doc.body && box !== doc.documentElement) { const o = win.getComputedStyle(box).overflowY; if ((o === 'auto' || o === 'scroll') && box.scrollHeight > box.clientHeight) break; box = box.parentElement; }
+const soft = win.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+if (!box || box === doc.body || box === doc.documentElement) win.scrollTo({ top: el.getBoundingClientRect().top + win.scrollY - off, behavior: soft });
+else box.scrollTo({ top: el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - off, behavior: soft });
+if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true });
+}
+}, fe('nome'), fe('email'), fe('azienda'), fe('zona'), fe('profilo'), fe('msg'), fe('priv'));
+}
+}
+
+return Component;
+});
+DCLite.mount("Contatti");
+</script>
+</body>
+</html>

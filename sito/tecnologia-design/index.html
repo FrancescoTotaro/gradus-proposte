@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141413">
+<meta name="color-scheme" content="dark">
+<title>Tecnologia &amp; Design · Gradus (anteprima)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>dc-host{display:contents}</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-head) a{color:inherit;text-decoration:none}
+:where(.cmp-head) a:focus-visible,:where(.cmp-head) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-head) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-head) .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+:where(.cmp-head) .pill-red{background:#c2063a;color:#fff}
+:where(.cmp-head) summary{list-style:none;cursor:pointer}
+:where(.cmp-head) summary::-webkit-details-marker{display:none}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-head) *,:where(.cmp-head) *::before,:where(.cmp-head) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@media (max-width:767px){
+:where(.cmp-head) .wrap{padding-left:20px;padding-right:20px}
+}
+@media (hover:hover) and (pointer:fine){
+:where(.cmp-head) .pill-red:hover{background:#a40531}
+}
+:where(.cmp-head) a,:where(.cmp-head) button,:where(.cmp-head) summary{touch-action:manipulation}
+:where(.cmp-head) button,:where(.cmp-head) .pill{-webkit-user-select:none;user-select:none}
+:where(.cmp-head) .pill{transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+:where(.cmp-head) .pill:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-head) .pill:active{transform:none}
+}
+.site-head{position:sticky;top:0;z-index:20;border-bottom:1px solid transparent}
+.bar{height:80px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.nav-d{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav-d a{opacity:.85;transition:opacity var(--dur-fast) var(--ease-out)}
+.nav-m{display:none}
+@media (prefers-reduced-motion:no-preference){
+@supports (animation-timeline:scroll()){
+.site-head{animation:headIn linear both;animation-timeline:scroll();animation-range:0 240px}
+}
+}
+@media (max-width:900px){
+.nav-d{display:none}
+.nav-m{display:block}
+}
+.mn-nav{display:flex;gap:12px;font-size:14px;font-weight:500}
+.mn-nv{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 8px;font:inherit;font-weight:500;color:#fff;background:none;border:0;cursor:pointer}
+.mn-nv svg{transition:transform 250ms cubic-bezier(.2,.8,.2,1)}
+.mn-nv[aria-expanded="true"]{text-decoration:underline;text-decoration-color:#fff;text-decoration-thickness:2px;text-underline-offset:8px}
+.mn-nv[aria-expanded="true"] svg{transform:rotate(180deg)}
+.mn-nv:focus-visible,.mn-burger:focus-visible,.mn-mob button:focus-visible,.mn-mob a:focus-visible,.mn-band a:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:6px}
+.mn-scrim{position:absolute;left:0;right:0;top:100%;height:100vh;height:100dvh;background:rgba(20,20,19,.6);animation:mnFade 200ms ease-out both}
+.mn-band{position:absolute;left:0;right:0;top:100%;z-index:2;background:#1d1d1c;border-top:1px solid rgba(255,255,255,.12);animation:mnIn 250ms cubic-bezier(.2,.8,.2,1) both}
+.mn-band-in{max-width:1360px;margin:0 auto;padding:40px 24px 48px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.mn-band-l{padding-right:40px;display:flex;flex-direction:column;gap:16px}
+.mn-band-l small{font-size:14px;line-height:20px;font-weight:500;color:#c9ccce}
+.mn-band-l p{margin:0;font-size:28px;line-height:34px;font-weight:700;letter-spacing:-.02em;text-wrap:balance}
+.mn-band-l a{align-self:flex-start;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-band-r{border-left:1px solid rgba(255,255,255,.16);padding-left:40px}
+.mn-band-r ul,.mn-mob ul{list-style:none;margin:0;padding:0}
+.mn-band-r ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+.mn-band-r li{border-bottom:1px solid #4a4947}
+.mn-band-r li a{display:flex;align-items:center;justify-content:space-between;min-height:68px;font-size:24px;font-weight:600;letter-spacing:-.01em}
+.mn-band-r li a svg{color:#c9ccce;transition:color 150ms,transform 250ms cubic-bezier(.2,.8,.2,1)}
+.mn-band-r li a:focus-visible svg{color:#fff;transform:translateX(4px)}
+.mn-burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:none;border:0;color:#fff;cursor:pointer}
+.mn-mob{position:absolute;top:0;left:0;right:0;height:100vh;height:100dvh;z-index:60;background:#1d1d1c;color:#fff;display:flex;flex-direction:column;overflow-y:auto;animation:mnFade 200ms ease-out both}
+.mn-mob-hd{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 16px}
+.mn-mob-hd img{display:block;height:24px;width:auto}
+.mn-mob-hd button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;background:none;border:0;color:#fff;cursor:pointer}
+.mn-lv1{padding:8px 20px 0}
+.mn-lv1 li{border-bottom:1px solid #4a4947}
+.mn-lv1 a,.mn-lv1 button{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:68px;padding:0;background:none;border:0;color:#fff;font:inherit;font-size:26px;font-weight:600;letter-spacing:-.01em;text-align:left;cursor:pointer}
+.mn-lv1 svg{color:#c9ccce}
+.mn-lv2-top{display:flex;align-items:center;gap:6px;min-height:52px;padding:0 20px;background:none;border:0;color:#c9ccce;font:inherit;font-size:15px;font-weight:600;cursor:pointer;align-self:flex-start}
+.mn-lv2-h{margin:4px 20px 8px;font-size:30px;line-height:36px;font-weight:700;letter-spacing:-.02em}
+.mn-lv2-all{align-self:flex-start;margin:0 20px 12px;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-foot{margin-top:auto;padding:16px 20px 24px;display:flex;flex-direction:column;gap:14px;border-top:1px solid #4a4947}
+.mn-meta{display:flex;align-items:center;justify-content:space-between;min-height:44px;font-size:14px;font-weight:500;color:#c9ccce}
+.mn-meta span:last-child{display:flex;gap:16px}
+.mn-meta a{color:#fff}
+.mn-meta a[aria-current]{text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.mn-foot .pill{width:100%;min-height:52px;font-size:15px;box-sizing:border-box}
+@media (max-width:1199px){
+.mn-nav,.mn-lang,.mn-cta{display:none!important}
+.mn-burger{display:inline-flex}
+.mn-band,.mn-scrim{display:none}
+}
+@media (min-width:1200px){
+.mn-mob{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+.mn-scrim,.mn-band,.mn-mob{animation:none}
+.mn-nv svg,.mn-band-r li a svg{transition:none}
+}
+@media (hover:hover) and (pointer:fine){
+.nav-d a:hover{opacity:1;text-decoration:underline;text-decoration-color:#c2063a;text-underline-offset:7px;text-decoration-thickness:2px}
+.mn-nv:hover{text-shadow:.6px 0 0 #fff,-.6px 0 0 #fff}
+.mn-band-r li a:hover svg{color:#fff;transform:translateX(4px)}
+.mn-band-r li a:hover span{text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+}
+.mn-mob{overscroll-behavior:contain}
+.mn-foot{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;padding:12px 20px;border-radius:999px;background:#fff;color:#1d1d1c;font-size:15px;font-weight:600}
+.skip:focus{top:12px}
+@keyframes headIn{from{background:rgba(20,20,19,0);border-bottom-color:transparent}to{background:rgba(20,20,19,.88);border-bottom-color:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}}
+@keyframes mnFade{from{opacity:0}}
+@keyframes mnIn{from{opacity:0;transform:translateY(-8px)}}
+</style>
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-bar) a{color:inherit;text-decoration:none}
+:where(.cmp-bar) a:focus-visible,:where(.cmp-bar) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-bar) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-bar) .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+:where(.cmp-bar) .pill-red{background:#c2063a;color:#fff}
+:where(.cmp-bar) summary{list-style:none;cursor:pointer}
+:where(.cmp-bar) summary::-webkit-details-marker{display:none}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-bar) *,:where(.cmp-bar) *::before,:where(.cmp-bar) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@media (max-width:767px){
+:where(.cmp-bar) .wrap{padding-left:20px;padding-right:20px}
+}
+@media (hover:hover) and (pointer:fine){
+:where(.cmp-bar) .pill-red:hover{background:#a40531}
+}
+:where(.cmp-bar) a,:where(.cmp-bar) button,:where(.cmp-bar) summary{touch-action:manipulation}
+:where(.cmp-bar) button,:where(.cmp-bar) .pill{-webkit-user-select:none;user-select:none}
+:where(.cmp-bar) .pill{transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+:where(.cmp-bar) .pill:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-bar) .pill:active{transform:none}
+}
+.sf-anchors{position:sticky;top:80px;z-index:15;background:rgba(20,20,19,.94);border-bottom:1px solid rgba(255,255,255,.1)}
+.sf-anchors .wrap{display:flex;align-items:center;gap:4px;min-height:64px;overflow-x:auto;scrollbar-width:none}
+.sf-anchors .wrap::-webkit-scrollbar{display:none}
+.sf-anchors a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-size:14px;font-weight:600;color:#e4e7e9;border-radius:999px}
+.sf-anchors .sf-anchors-cta{margin-left:auto;color:#fff;padding:0 22px}
+@media (hover:hover) and (pointer:fine){
+.sf-anchors a:not(.pill):hover{color:#fff;background:rgba(255,255,255,.08)}
+}
+@media (max-width:767px){
+.sf-anchors .sf-anchors-cta{display:none}
+.sf-anchors .wrap{min-height:56px;padding-left:12px;padding-right:12px}
+}
+</style>
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-req) a{color:inherit;text-decoration:none}
+:where(.cmp-req) a:focus-visible,:where(.cmp-req) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-req) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-req) .lnk{color:#fff;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px;transition:color var(--dur-fast) var(--ease-out)}
+:where(.cmp-req) .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+:where(.cmp-req) .pill-red{background:#c2063a;color:#fff}
+:where(.cmp-req) .pill-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+:where(.cmp-req) summary{list-style:none;cursor:pointer}
+:where(.cmp-req) summary::-webkit-details-marker{display:none}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-req) *,:where(.cmp-req) *::before,:where(.cmp-req) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+:where(.cmp-req) .reveal{margin-inline:-48px;padding-inline:48px;view-timeline-name:--sezione;animation:reveal-fondo linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%}
+:where(.cmp-req) .reveal>.wrap{animation:reveal-zoom linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%;transform-origin:50% 0}
+}
+}
+@media (max-width:767px){
+:where(.cmp-req) .wrap{padding-left:20px;padding-right:20px}
+}
+@media (hover:hover) and (pointer:fine){
+:where(.cmp-req) .lnk:hover{color:#fff;text-decoration-thickness:3px;text-underline-offset:8px}
+:where(.cmp-req) .pill-red:hover{background:#a40531}
+:where(.cmp-req) .pill-line:hover{background:#fff;color:#1d1d1c}
+}
+:where(.cmp-req) a,:where(.cmp-req) button,:where(.cmp-req) summary{touch-action:manipulation}
+:where(.cmp-req) button,:where(.cmp-req) .pill{-webkit-user-select:none;user-select:none}
+:where(.cmp-req) .pill{transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+:where(.cmp-req) .pill:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-req) .pill:active{transform:none}
+}
+@supports (animation-timeline: view()){
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference){
+:where(.cmp-req) .reveal{animation-name:reveal-fondo-m}
+}
+}
+.sf-req-sec{padding:88px 0 96px;background:radial-gradient(120% 70% at 50% 120%,rgba(194,6,58,.75) 0%,rgba(120,4,38,.45) 40%,rgba(29,29,28,0) 75%),#1d1d1c}
+.sf-req{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.sf-req-txt h2{margin:0;font-size:clamp(34px,4vw,56px);line-height:1.08;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.sf-req-txt>p{margin:18px 0 0;font-size:19px;line-height:1.6;color:#e4e7e9;max-width:440px}
+.sf-steps{margin:32px 0 0;padding:0;list-style:none;counter-reset:passo;display:flex;flex-direction:column;gap:16px;max-width:440px}
+.sf-steps li{counter-increment:passo;display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;font-size:16px;line-height:1.5;color:#e4e7e9}
+.sf-steps li::before{content:counter(passo);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);font-size:14px;font-weight:700;color:#fff}
+.sf-form-box{padding:36px;border-radius:20px;background:#262625;border:1px solid #4a4947}
+.sf-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 20px}
+.sf-for{grid-column:1/-1;margin:0;font-size:15px;color:#c9ccce}
+.sf-for b{color:#fff}
+.sf-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sf-field:has(textarea),.sf-check,.sf-submit,.sf-field:has(#sf-ver){grid-column:1/-1}
+.sf-field label{font-size:14px;font-weight:600;color:#fff}
+.sf-star{color:#fff}
+.sf-opt{font-weight:400;color:#c9ccce}
+.sf-in{width:100%;min-height:52px;box-sizing:border-box;padding:12px 16px;border-radius:12px;border:1.5px solid #8a9096;background:#1d1d1c;color:#fff;font:inherit;font-size:16px;line-height:1.4}
+textarea.sf-in{min-height:120px;resize:vertical}
+select.sf-in{appearance:none;-webkit-appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select.sf-in option{background:#1d1d1c;color:#fff}
+.sf-in:focus-visible{outline:3px solid #fff;outline-offset:2px;border-color:#fff}
+.sf-in[aria-invalid="true"]{border-color:#D2003C;border-width:2px}
+.sf-err{display:flex;align-items:flex-start;gap:8px;margin:0;font-size:14px;line-height:1.4;font-weight:500;color:#fff}
+.sf-err::before{content:"!";flex:0 0 18px;display:grid;place-items:center;width:18px;height:18px;margin-top:1px;border-radius:50%;background:#D2003C;color:#fff;font-size:12px;font-weight:800;line-height:1}
+.sf-hint{margin:0;font-size:13px;color:#c9ccce}
+.sf-check{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:12px}
+.sf-check input{flex:0 0 auto;width:24px;height:24px;margin:0;accent-color:#c2063a}
+.sf-check label{flex:1;font-size:14px;font-weight:400;line-height:1.5;color:#e4e7e9}
+.sf-check .sf-err{flex-basis:100%}
+.sf-submit{justify-self:start;min-height:52px;padding:0 32px;border:0;font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.sf-ok h3{margin:0;font-size:28px;font-weight:700}
+.sf-ok p{margin:10px 0 24px;font-size:17px;line-height:1.55;color:#e4e7e9}
+.sf-ok .pill{border:1.5px solid rgba(255,255,255,.7);background:none;font:inherit;font-size:15px;font-weight:600;cursor:pointer;min-height:48px}
+@media (max-width:1199px){
+.sf-req{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:767px){
+.sf-req-sec{padding:56px 0 64px}
+.sf-req{gap:32px}
+.sf-form-box{padding:20px;border-radius:16px}
+.sf-form{grid-template-columns:minmax(0,1fr)}
+.sf-submit{justify-self:stretch;width:100%}
+}
+#richiesta{margin-top:96px}
+@media (max-width:767px){
+#richiesta{margin-top:64px}
+}
+.sf-req-sec.reveal{margin-inline:-48px;padding-inline:48px}
+@keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
+@keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+</style>
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-foot) a{color:inherit;text-decoration:none}
+:where(.cmp-foot) a:focus-visible,:where(.cmp-foot) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-foot) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-foot) .label{font-size:14px;line-height:1.5;font-weight:500;color:#c9ccce}
+:where(.cmp-foot) summary{list-style:none;cursor:pointer}
+:where(.cmp-foot) summary::-webkit-details-marker{display:none}
+:where(.cmp-foot) .grid2{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:1px solid var(--hair)}
+:where(.cmp-foot) .grid2>.label{padding:28px 40px 0 0}
+:where(.cmp-foot) .grid2>.content{padding:28px 0 0 40px;min-width:0;border-left:1px solid var(--hair)}
+@media (max-width:900px){
+:where(.cmp-foot) .grid2{grid-template-columns:minmax(0,1fr)}
+:where(.cmp-foot) .grid2>.label{padding:24px 0 0}
+:where(.cmp-foot) .grid2>.content{padding:12px 0 0;border-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-foot) *,:where(.cmp-foot) *::before,:where(.cmp-foot) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+:where(.cmp-foot) .reveal{margin-inline:-48px;padding-inline:48px;view-timeline-name:--sezione;animation:reveal-fondo linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%}
+:where(.cmp-foot) .reveal>.wrap{animation:reveal-zoom linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%;transform-origin:50% 0}
+}
+}
+@media (max-width:767px){
+:where(.cmp-foot) .wrap{padding-left:20px;padding-right:20px}
+:where(.cmp-foot) .grid2>.content{padding-top:8px}
+}
+:where(.cmp-foot) a,:where(.cmp-foot) button,:where(.cmp-foot) summary{touch-action:manipulation}
+:where(.cmp-foot) button{-webkit-user-select:none;user-select:none}
+@supports (animation-timeline: view()){
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference){
+:where(.cmp-foot) .reveal{animation-name:reveal-fondo-m}
+}
+}
+.ft-q{display:none}
+.ft-col{display:flex;flex-direction:column;gap:14px}
+.ft-links{display:flex;flex-direction:column;gap:14px}
+.ft-h{color:#fff;font-weight:700}
+.ft-hl{align-self:flex-start;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
+.ft-all{display:none}
+@media (hover:hover) and (pointer:fine){
+.cmp-foot .ft-links a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+}
+@media (max-width:767px){
+.ft-cols{display:block!important;padding-top:16px!important}
+.ft-col{gap:0;border-bottom:1px solid #4a4947}
+.ft-col:first-child{border-top:1px solid #4a4947}
+.ft-h{display:none}
+.ft-q{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:56px;padding:0;background:none;border:0;color:#fff;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.ft-q svg{transition:transform 250ms cubic-bezier(.2,.8,.2,1)}
+.ft-q[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ft-q:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:6px}
+.ft-links{display:none;gap:4px;padding-bottom:16px}
+.ft-links[data-open="true"]{display:flex}
+.ft-links a{display:flex;align-items:center;min-height:44px}
+.ft-links .ft-all{display:flex}
+}
+@keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
+@keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+</style>
+<style>
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--hair:rgba(255,255,255,.16);--ease-out:cubic-bezier(.2,.8,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms}
+body{margin:0;font-family:'Montserrat',system-ui,sans-serif;color:#fff;background:#1d1d1c}
+html,body{overflow-x:clip}
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+a,button{touch-action:manipulation}
+.wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+.label{font-size:14px;line-height:1.5;font-weight:500;color:#c9ccce}
+.lnk{color:#fff;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px;transition:color var(--dur-fast) var(--ease-out)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;box-sizing:border-box;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;-webkit-user-select:none;user-select:none;transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+.pill:active{transform:scale(.97)}
+.pill-red{background:#c2063a;color:#fff;border:1px solid #e0587c}
+.pill-white{background:#fff;color:#1d1d1c}
+.pill-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.grid2{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:1px solid var(--hair)}
+.grid2>.label{padding:28px 40px 0 0}
+.grid2>.content{padding:28px 0 0 40px;min-width:0;border-left:1px solid var(--hair)}
+.sf-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0}
+.sf-crumbs ol{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none;font-size:14px;line-height:20px;color:rgba(255,255,255,.82)}
+.sf-crumbs li+li::before{content:"\203A";margin-right:8px}
+.sf-crumbs [aria-current]{color:#fff;font-weight:600}
+.sf-sticky{display:none}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.reveal{margin-inline:-48px;padding-inline:48px;view-timeline-name:--sezione;animation:reveal-fondo linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%}
+.reveal>.wrap{animation:reveal-zoom linear both;animation-timeline:--sezione;animation-range:entry 0% entry 70%;transform-origin:50% 0}
+}
+@media (pointer:coarse) and (prefers-reduced-motion:no-preference){.reveal{animation-name:reveal-fondo-m}}
+}
+@keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+@keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
+.td-sec.reveal{margin-inline:-48px;padding-inline:48px}
+#controllo,#ripetibilita,#performance,#semplicita,#design,#modelli{scroll-margin-top:160px}
+
+/* Apertura con foto */
+.td-hero{position:relative;margin-top:-82px;height:760px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#141413}
+.td-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.td-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,19,.92) 0%,rgba(20,20,19,.65) 42%,rgba(20,20,19,0) 75%),linear-gradient(180deg,rgba(20,20,19,.55) 0%,rgba(20,20,19,0) 25%,rgba(20,20,19,0) 60%,#1d1d1c 100%)}
+.td-hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:88px}
+.td-h1{margin:0;font-size:72px;line-height:1;font-weight:800;letter-spacing:-.03em;max-width:820px;text-wrap:balance}
+.td-lead{margin:28px 0 0;font-size:20px;line-height:32px;color:#fff;max-width:600px}
+.td-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* Sezioni */
+.td-sec{padding:96px 0 0;background:#1d1d1c}
+.td-h2{margin:0;font-size:clamp(32px,3.4vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.03em;text-wrap:balance;max-width:820px}
+.td-intro{margin:20px 0 0;font-size:19px;line-height:1.6;color:#e4e7e9;max-width:640px}
+
+/* I quattro criteri in sintesi */
+.td-crit{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 32px}
+.td-crit li{border-top:1px solid var(--hair)}
+.td-crit a{display:flex;flex-direction:column;gap:10px;padding:28px 0 8px;min-height:44px}
+.td-crit-n{font-size:32px;line-height:1;font-weight:800;letter-spacing:-.02em;color:#D2003C;font-variant-numeric:tabular-nums}
+.td-crit-k{font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.td-crit-t{font-size:20px;line-height:1.35;font-weight:700}
+.td-crit-arrow{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-size:14px;font-weight:600;color:#c9ccce;transition:color var(--dur-fast) var(--ease-out)}
+.td-crit-arrow svg{transition:transform var(--dur-base) var(--ease-out)}
+
+/* Un blocco per criterio */
+.td-story{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:start;margin-top:56px}
+.td-story--rev .td-story-img{order:2}
+.td-story-img{position:sticky;top:164px;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#141413}
+.td-story-img img{width:100%;height:100%;object-fit:cover;display:block}
+.td-k{display:flex;align-items:baseline;gap:14px;font-size:13px;line-height:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.td-k b{font-size:32px;line-height:1;font-weight:800;letter-spacing:-.02em;color:#D2003C}
+.td-story h2{margin:18px 0 0;font-size:clamp(32px,3.2vw,48px);line-height:1.08;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.td-story-txt>p{margin:18px 0 0;font-size:18px;line-height:1.6;color:#e4e7e9;max-width:520px}
+.td-tech{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-direction:column}
+.td-tech li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;align-items:start;padding:20px 0;border-top:1px solid rgba(255,255,255,.14)}
+.td-tech li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+.td-tech img,.td-tech svg{width:56px;height:auto;display:block}
+.td-tech h3{margin:0;font-size:18px;line-height:1.3;font-weight:700}
+.td-tech p{margin:6px 0 0;font-size:15px;line-height:24px;color:#c9ccce}
+.td-on{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;padding:0;list-style:none;font-size:13px;line-height:20px;font-weight:700;letter-spacing:.06em}
+.td-on a{display:inline-flex;align-items:center;min-height:24px;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-decoration-thickness:1px;text-underline-offset:4px}
+
+/* Tabella tecnologie × forni */
+.td-tscroll{margin-top:48px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#c2063a rgba(255,255,255,.12)}
+.td-tscroll:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.td-table{width:100%;border-collapse:collapse}
+.td-table thead th{padding:0 12px 16px;text-align:center;vertical-align:bottom}
+.td-table thead th:first-child{text-align:left;padding-left:0}
+.td-table thead a{display:inline-flex;flex-direction:column;align-items:center;gap:6px;font-size:18px;font-weight:800;letter-spacing:.06em;transition:color var(--dur-fast) var(--ease-out)}
+.td-table thead a span{font-size:12px;font-weight:600;letter-spacing:0;color:#c9ccce;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:4px}
+.td-table tbody tr:first-child>*{border-top:1px solid rgba(255,255,255,.16)}
+.td-table tbody th,.td-table tbody td{padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px;line-height:1.45}
+.td-table tbody th{padding-left:0;text-align:left;font-weight:600;width:34%}
+.td-table tbody th small{display:block;font-size:13px;font-weight:500;color:#c9ccce}
+.td-table tbody td{text-align:center;color:#8a9096}
+.td-yes{display:inline-block;width:14px;height:14px;border-radius:50%;background:#D2003C;vertical-align:middle}
+.td-opt{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;color:#fff}
+.td-opt::before{content:"";width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 2px #D2003C}
+.td-table-note{margin:14px 0 0;font-size:13px;line-height:20px;color:#c9ccce}
+.td-tscroll-hint{display:none}
+.td-models-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* Fascia catalogo */
+.td-catalogo{margin-top:96px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:center;padding:56px;border-radius:18px;background:radial-gradient(90% 120% at 85% 110%,#b3123f 0%,#8b0d2b 45%,#4a0718 100%)}
+.td-catalogo h2{margin:0;font-size:clamp(30px,3vw,44px);line-height:1.1;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.td-catalogo p{margin:14px 0 0;font-size:17px;line-height:27px;color:rgba(255,255,255,.9);max-width:560px}
+.td-catalogo-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.td-end{height:24px}
+
+@media (hover:hover) and (pointer:fine){
+.lnk:hover{text-decoration-thickness:3px;text-underline-offset:8px}
+.pill-red:hover{background:#a40531}
+.pill-white:hover{background:#f1ece8}
+.pill-line:hover{background:#fff;color:#1d1d1c}
+.sf-crumbs a:hover{text-decoration:underline;text-underline-offset:4px}
+.td-crit a:hover .td-crit-arrow{color:#fff}
+.td-crit a:hover .td-crit-arrow svg{transform:translateY(3px)}
+.td-on a:hover{text-decoration-color:#c2063a;text-decoration-thickness:2px}
+.td-table thead a:hover{color:#D2003C}
+}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+.pill:active,.td-crit a:hover .td-crit-arrow svg{transform:none}
+}
+@media (max-width:1199px){
+.td-crit{grid-template-columns:repeat(2,minmax(0,1fr))}
+.td-story,.td-story--rev{grid-template-columns:minmax(0,1fr);gap:32px}
+.td-story--rev .td-story-img{order:0}
+.td-story-img{position:static;aspect-ratio:16/10}
+.td-catalogo{grid-template-columns:minmax(0,1fr)}
+.td-catalogo-cta{justify-content:flex-start}
+}
+@media (max-width:900px){
+.grid2{grid-template-columns:minmax(0,1fr)}
+.grid2>.label{padding:24px 0 0}
+.grid2>.content{padding:12px 0 0;border-left:0}
+}
+@media (max-width:767px){
+html{scroll-padding-top:140px}
+.wrap{padding-left:20px;padding-right:20px}
+.td-hero{height:min(100svh,844px);min-height:600px}
+.td-hero-img{object-position:62% 50%}
+.td-hero::after{background:linear-gradient(180deg,rgba(20,20,19,.5) 0%,rgba(20,20,19,0) 22%,rgba(20,20,19,.25) 40%,rgba(20,20,19,.9) 68%,#1d1d1c 100%)}
+.td-hero .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+.sf-crumbs ol{margin-bottom:16px;font-size:13px}
+.td-h1{font-size:40px;line-height:44px}
+.td-lead{margin-top:20px;font-size:18px;line-height:28px}
+.td-cta{margin-top:24px}
+.td-cta .pill-line{display:none}
+.td-sec{padding-top:64px}
+.td-intro{font-size:17px}
+.td-crit{grid-template-columns:minmax(0,1fr);margin-top:28px}
+.td-crit a{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:20px 0}
+.td-crit-n{font-size:26px}
+.td-crit-t{flex-basis:100%;font-size:18px}
+.td-crit-arrow{display:none}
+.td-story{margin-top:32px;gap:24px}
+.td-k b{font-size:26px}
+.td-story h2{font-size:30px}
+.td-story-txt>p{font-size:17px}
+.td-tech li{grid-template-columns:48px minmax(0,1fr);gap:16px;padding:16px 0}
+.td-tech img,.td-tech svg{width:48px}
+.td-tscroll{margin-right:-20px;padding-right:20px;margin-top:28px}
+.td-table{min-width:560px}
+.td-table th:first-child{position:sticky;left:0;z-index:1;width:150px;min-width:150px;background:#1d1d1c;box-shadow:8px 0 12px -10px rgba(0,0,0,.9)}
+.td-table thead a{font-size:15px}
+.td-table tbody th{font-size:14px}
+.td-tscroll-hint{display:flex;align-items:center;gap:8px;margin:28px 0 0;font-size:13px;color:#c9ccce}
+.td-tscroll-hint+.td-tscroll{margin-top:12px}
+.td-models-cta .pill{width:100%}
+.td-catalogo{margin-top:64px;padding:28px 24px;gap:24px}
+.td-catalogo-cta{flex-direction:column}
+.td-catalogo-cta .pill{width:100%}
+.sf-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:#1d1d1c;border-top:1px solid #4a4947}
+.sf-sticky .pill{display:flex;width:100%;min-height:52px}
+#servizi{padding-bottom:84px}
+}
+#contenuto [tabindex="-1"]:focus{outline:none}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<script src="../js/morphdom.min.js"></script>
+<script src="../js/dc-lite.js"></script>
+<script>
+DCLite.define("Comp-Header", "<div class=\"cmp-head\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<a class=\"skip\" href=\"#contenuto\">Salta al contenuto<\/a>\n<header class=\"site-head\" onKeyDown=\"{{mnKey}}\">\n<div class=\"wrap bar\" style=\"display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 2px\">\n<a href=\"../home/\" aria-label=\"Gradus, home\"><img src=\"../img/e52b0b2830a177d91570dc5492c7bdab.svg\" alt=\"Gradus perfect baking\" style=\"display:block;height:34px;width:auto\" width=\"576\" height=\"87\" fetchpriority=\"high\"><\/a><nav class=\"mn-nav\" aria-label=\"Principale\"><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnSolExp}}\" aria-controls=\"mn-sol\" onClick=\"{{mnSolT}}\">Soluzioni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnForExp}}\" aria-controls=\"mn-for\" onClick=\"{{mnForT}}\">Forni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnAppExp}}\" aria-controls=\"mn-app\" onClick=\"{{mnAppT}}\">Applicazioni<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnSerExp}}\" aria-controls=\"mn-ser\" onClick=\"{{mnSerT}}\">Servizi<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><button class=\"mn-nv\" type=\"button\" aria-expanded=\"{{mnGraExp}}\" aria-controls=\"mn-gra\" onClick=\"{{mnGraT}}\">Gradus<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/nav>\n\n<div style=\"display:flex; align-items:center; justify-content:flex-end; gap: 24px; font-size:14px; font-weight:600\">\n<span class=\"mn-lang\" style=\"display:flex;gap:12px\"><a href=\"#\" aria-current=\"true\" style=\"text-decoration:underline;text-decoration-color:#c2063a;text-underline-offset:6px;text-decoration-thickness:2px\" style-hover=\"text-shadow: 0.6px 0 0 #ffffff, -0.6px 0 0 #ffffff, 0 0 0.5px #ffffff\">IT<\/a><a href=\"#\" style=\"opacity:.75\" style-hover=\"text-shadow: 0.6px 0 0 #ffffff, -0.6px 0 0 #ffffff, 0 0 0.5px #ffffff\">EN<\/a><\/span>\n<a class=\"pill pill-red mn-cta\" href=\"../contatti/\" style=\"padding: 13px 26px; font-size: 14px; background: transparent; color: #ffffff; border-color: #D52F5D; border-width: 1.5px; border-style: solid\" style-hover=\"background: #ffffff; color: #c2063a; border-color: #ffffff\">Contatti<\/a><button class=\"mn-burger\" type=\"button\" aria-label=\"Apri il menu\" aria-expanded=\"{{mnMobExp}}\" aria-controls=\"mn-mob\" onClick=\"{{mnMobT}}\"><svg viewBox=\"0 0 24 24\" width=\"31\" height=\"26\" aria-hidden=\"true\" preserveAspectRatio=\"none\"><path d=\"M4 7h16M4 12h16M4 17h16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><\/path><\/svg><\/button>\n<\/div>\n<\/div>\n<sc-if value=\"{{mnAny}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-scrim\" onClick=\"{{mnClose}}\"><\/div><\/sc-if><sc-if value=\"{{mnSolOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-sol\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Soluzioni<\/small><p>Soluzioni per il tuo modo di lavorare<\/p><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../professionisti/\" onClick=\"{{mnClose}}\"><span>Professionisti<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catene/\" onClick=\"{{mnClose}}\"><span>Catene<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rivenditori/\" onClick=\"{{mnClose}}\"><span>Rivenditori<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnForOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-for\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Forni<\/small><p>Quattro famiglie di forni<\/p><a href=\"../forni/\" onClick=\"{{mnClose}}\">Vai a Forni<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../cratos/\" onClick=\"{{mnClose}}\"><span>CRATOS<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../jack/\" onClick=\"{{mnClose}}\"><span>JACK<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../modular/\" onClick=\"{{mnClose}}\"><span>MODULAR<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rotor/\" onClick=\"{{mnClose}}\"><span>ROTOR<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnAppOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-app\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Applicazioni<\/small><p>Il tuo settore, la nostra cottura<\/p><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../pizzeria/\" onClick=\"{{mnClose}}\"><span>Pizzeria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../panetteria/\" onClick=\"{{mnClose}}\"><span>Panetteria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../pasticceria/\" onClick=\"{{mnClose}}\"><span>Pasticceria<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnSerOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-ser\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Servizi<\/small><p>Al tuo fianco dopo l’acquisto<\/p><a href=\"../servizi/\" onClick=\"{{mnClose}}\">Vai a Servizi<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../assistenza/\" onClick=\"{{mnClose}}\"><span>Assistenza<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catalogo/\" onClick=\"{{mnClose}}\"><span>Catalogo<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../gradus-point/\" onClick=\"{{mnClose}}\"><span>Gradus Point<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../faq/\" onClick=\"{{mnClose}}\"><span>FAQ<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnGraOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-band\" id=\"mn-gra\"><div class=\"mn-band-in\"><div class=\"mn-band-l\"><small>Gradus<\/small><p>Chi siamo<\/p><a href=\"../gradus/\" onClick=\"{{mnClose}}\">Vai a Gradus<\/a><\/div><div class=\"mn-band-r\"><ul><li><a href=\"../il-gruppo/\" onClick=\"{{mnClose}}\"><span>Il Gruppo<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../tecnologia-design/\" onClick=\"{{mnClose}}\"><span>Tecnologia &amp; Design<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../news/\" onClick=\"{{mnClose}}\"><span>News &amp; Eventi<\/span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/div><\/div><\/div><\/sc-if><sc-if value=\"{{mnMobOpen}}\" hint-placeholder-val=\"{{ false }}\"><div class=\"mn-mob\" id=\"mn-mob\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\"><div class=\"mn-mob-hd\"><img src=\"../img/e52b0b2830a177d91570dc5492c7bdab.svg\" alt=\"Gradus perfect baking\" width=\"576\" height=\"87\" loading=\"lazy\" decoding=\"async\"><button type=\"button\" aria-label=\"Chiudi il menu\" onClick=\"{{mnMobT}}\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6L6 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><\/path><\/svg><\/button><\/div><sc-if value=\"{{mnLvRoot}}\" hint-placeholder-val=\"{{ true }}\"><ul class=\"mn-lv1\"><li><button type=\"button\" onClick=\"{{mnSolGo}}\">Soluzioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnForGo}}\">Forni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnAppGo}}\">Applicazioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnSerGo}}\">Servizi<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><li><button type=\"button\" onClick=\"{{mnGraGo}}\">Gradus<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><\/li><\/ul><\/sc-if><sc-if value=\"{{mnSolLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Soluzioni<\/p><ul class=\"mn-lv1\"><li><a href=\"../professionisti/\" onClick=\"{{mnCloseAll}}\">Professionisti<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catene/\" onClick=\"{{mnCloseAll}}\">Catene<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rivenditori/\" onClick=\"{{mnCloseAll}}\">Rivenditori<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnForLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Forni<\/p><a class=\"mn-lv2-all\" href=\"../forni/\" onClick=\"{{mnCloseAll}}\">Vai a Forni<\/a><ul class=\"mn-lv1\"><li><a href=\"../cratos/\" onClick=\"{{mnCloseAll}}\">CRATOS<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../jack/\" onClick=\"{{mnCloseAll}}\">JACK<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../modular/\" onClick=\"{{mnCloseAll}}\">MODULAR<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../rotor/\" onClick=\"{{mnCloseAll}}\">ROTOR<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnAppLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Applicazioni<\/p><ul class=\"mn-lv1\"><li><a href=\"../pizzeria/\" onClick=\"{{mnCloseAll}}\">Pizzeria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../panetteria/\" onClick=\"{{mnCloseAll}}\">Panetteria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../pasticceria/\" onClick=\"{{mnCloseAll}}\">Pasticceria<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnSerLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Servizi<\/p><a class=\"mn-lv2-all\" href=\"../servizi/\" onClick=\"{{mnCloseAll}}\">Vai a Servizi<\/a><ul class=\"mn-lv1\"><li><a href=\"../assistenza/\" onClick=\"{{mnCloseAll}}\">Assistenza<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../catalogo/\" onClick=\"{{mnCloseAll}}\">Catalogo<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../gradus-point/\" onClick=\"{{mnCloseAll}}\">Gradus Point<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../faq/\" onClick=\"{{mnCloseAll}}\">FAQ<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><sc-if value=\"{{mnGraLv}}\" hint-placeholder-val=\"{{ false }}\"><button class=\"mn-lv2-top\" type=\"button\" onClick=\"{{mnBack}}\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 6l-6 6 6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Menù<\/button><p class=\"mn-lv2-h\">Gradus<\/p><a class=\"mn-lv2-all\" href=\"../gradus/\" onClick=\"{{mnCloseAll}}\">Vai a Gradus<\/a><ul class=\"mn-lv1\"><li><a href=\"../il-gruppo/\" onClick=\"{{mnCloseAll}}\">Il Gruppo<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../tecnologia-design/\" onClick=\"{{mnCloseAll}}\">Tecnologia &amp; Design<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><li><a href=\"../news/\" onClick=\"{{mnCloseAll}}\">News &amp; Eventi<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/a><\/li><\/ul><\/sc-if><div class=\"mn-foot\"><div class=\"mn-meta\"><span>+39 0722 354048<\/span><span><a href=\"#\" aria-current=\"true\">IT<\/a><a href=\"#\">EN<\/a><\/span><\/div><a class=\"pill pill-red\" href=\"../contatti/\" onClick=\"{{mnCloseAll}}\">Contattaci<\/a><\/div><\/div><\/sc-if><\/header>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { mnOpen: null, mnMob: false, mnLv: null }; }
+// position:sticky funziona solo se il genitore diretto è alto quanto la pagina: se il motore avvolge il componente in un contenitore alto quanto l'header, quel contenitore diventa trasparente al layout (display: contents)
+fixSticky() {
+const doc = typeof document !== 'undefined' ? document : null; if (!doc) return;
+doc.querySelectorAll('.site-head').forEach((el) => {
+let p = el.parentElement;
+while (p && p !== doc.body && p !== doc.documentElement) {
+const cs = doc.defaultView.getComputedStyle(p);
+if (cs.display === 'contents') { p = p.parentElement; continue; }
+if (p.offsetHeight <= el.offsetHeight + 4) { p.style.setProperty('display', 'contents', 'important'); p = p.parentElement; continue; }
+break;
+}
+});
+}
+componentDidMount() { this.fixSticky(); this._fx = [300, 1000, 2500].map((t) => setTimeout(() => this.fixSticky(), t)); }
+componentDidUpdate() { this.fixSticky(); }
+componentWillUnmount() { (this._fx || []).forEach(clearTimeout); }
+renderVals() {
+const mo = this.state.mnOpen, ml = this.state.mnLv;
+const t = (k) => () => this.setState({ mnOpen: mo === k ? null : k });
+const go = (k) => () => this.setState({ mnLv: k });
+return {
+mnSolOpen: mo === 'sol', mnSolExp: mo === 'sol' ? 'true' : 'false', mnSolT: t('sol'), mnSolLv: ml === 'sol', mnSolGo: go('sol'),
+mnForOpen: mo === 'for', mnForExp: mo === 'for' ? 'true' : 'false', mnForT: t('for'), mnForLv: ml === 'for', mnForGo: go('for'),
+mnAppOpen: mo === 'app', mnAppExp: mo === 'app' ? 'true' : 'false', mnAppT: t('app'), mnAppLv: ml === 'app', mnAppGo: go('app'),
+mnSerOpen: mo === 'ser', mnSerExp: mo === 'ser' ? 'true' : 'false', mnSerT: t('ser'), mnSerLv: ml === 'ser', mnSerGo: go('ser'),
+mnGraOpen: mo === 'gra', mnGraExp: mo === 'gra' ? 'true' : 'false', mnGraT: t('gra'), mnGraLv: ml === 'gra', mnGraGo: go('gra'),
+mnAny: mo !== null,
+mnClose: () => this.setState({ mnOpen: null }),
+mnMobOpen: this.state.mnMob,
+mnMobExp: this.state.mnMob ? 'true' : 'false',
+mnMobT: () => this.setState({ mnMob: !this.state.mnMob, mnLv: null }),
+mnLvRoot: ml === null,
+mnBack: () => this.setState({ mnLv: null }),
+mnCloseAll: () => this.setState({ mnOpen: null, mnMob: false, mnLv: null }),
+mnKey: (e) => { if (e.key === 'Escape') this.setState({ mnOpen: null, mnMob: false, mnLv: null }); }
+};
+}
+}
+
+return Component;
+});
+DCLite.define("Comp-Barra-sezione", "<div class=\"cmp-bar\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<nav class=\"sf-anchors\" aria-label=\"Contenuti della pagina\">\n<div class=\"wrap\"><sc-for list=\"{{voci}}\" as=\"v\" hint-placeholder-count=\"4\"><a href=\"{{v.href}}\" onClick=\"{{v.go}}\">{{v.label}}<\/a><\/sc-for><a class=\"pill pill-red sf-anchors-cta\" href=\"#richiesta\" onClick=\"{{goCta}}\">Richiedi informazioni<\/a><\/div>\n<\/nav>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+// position:sticky funziona solo se il genitore diretto è alto quanto la pagina: se il motore avvolge il componente in un contenitore alto quanto la barra, quel contenitore diventa trasparente al layout (display: contents)
+fixSticky() {
+const doc = typeof document !== 'undefined' ? document : null; if (!doc) return;
+doc.querySelectorAll('.sf-anchors').forEach((el) => {
+let p = el.parentElement;
+while (p && p !== doc.body && p !== doc.documentElement) {
+const cs = doc.defaultView.getComputedStyle(p);
+if (cs.display === 'contents') { p = p.parentElement; continue; }
+if (p.offsetHeight <= el.offsetHeight + 4) { p.style.setProperty('display', 'contents', 'important'); p = p.parentElement; continue; }
+break;
+}
+});
+}
+componentDidMount() { this.fixSticky(); this._fx = [300, 1000, 2500].map((t) => setTimeout(() => this.fixSticky(), t)); }
+componentDidUpdate() { this.fixSticky(); }
+componentWillUnmount() { (this._fx || []).forEach(clearTimeout); }
+goSez(e) {
+const a = e.currentTarget, id = (a.getAttribute('href') || '').slice(1), doc = a.ownerDocument, el = id && doc.getElementById(id);
+if (!el) return;
+e.preventDefault();
+const win = doc.defaultView, head = doc.querySelector('.site-head'), bar = doc.querySelector('.sf-anchors');
+// spazio occupato in alto da header e barra di sezione, più un margine di respiro
+let off = 16;
+if (bar && win.getComputedStyle(bar).position === 'sticky') off += (parseFloat(win.getComputedStyle(bar).top) || 0) + bar.offsetHeight;
+else if (head) off += head.offsetHeight;
+// contenitore che scorre davvero: il primo antenato con scorrimento verticale, altrimenti la pagina
+let box = el.parentElement;
+while (box && box !== doc.body && box !== doc.documentElement) { const o = win.getComputedStyle(box).overflowY; if ((o === 'auto' || o === 'scroll') && box.scrollHeight > box.clientHeight) break; box = box.parentElement; }
+const soft = win.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+if (!box || box === doc.body || box === doc.documentElement) { win.scrollTo({ top: el.getBoundingClientRect().top + win.scrollY - off, behavior: soft }); }
+else { box.scrollTo({ top: el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - off, behavior: soft }); }
+if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+el.focus({ preventScroll: true });
+}
+renderVals() {
+const voci = Array.isArray(this.props.voci) ? this.props.voci : [];
+const go = (e) => this.goSez(e);
+return { voci: voci.map((v) => Object.assign({}, v, { go })), goCta: go };
+}
+}
+
+return Component;
+});
+DCLite.define("Comp-Richiesta", "<div class=\"cmp-req\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<section class=\"sf-req-sec reveal\" id=\"richiesta\" aria-labelledby=\"t-req\">\n<div class=\"wrap sf-req\">\n<div class=\"sf-req-txt\">\n<h2 id=\"t-req\">{{titolo}}<\/h2>\n<p>{{testo}}<\/p>\n<ol class=\"sf-steps\">\n<li>Compili la richiesta, bastano un minuto e quattro campi.<\/li>\n<li>Il team Gradus ti ricontatta per capire volumi e spazi.<\/li>\n<li>Ricevi la configurazione e l’offerta.&nbsp;<\/li>\n<\/ol>\n<\/div>\n<div class=\"sf-form-box\" aria-live=\"polite\" style=\"border: 1px solid #D52F5D; box-shadow: 0 0 32px 4px rgba(213, 47, 93, 0.22)\">\n<sc-if value=\"{{formOn}}\" hint-placeholder-val=\"{{ true }}\">\n<form class=\"sf-form\" novalidate=\"\" onSubmit=\"{{submit}}\">\n<input type=\"hidden\" name=\"forno\" value=\"{{forno}}\">\n<p class=\"sf-for\">Richiesta per <b>{{forno}}<\/b><\/p>\n<div class=\"sf-field\"><label for=\"sf-nome\">Nome e cognome<span class=\"sf-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"sf-in\" id=\"sf-nome\" name=\"nome\" type=\"text\" required=\"\" aria-invalid=\"{{eNomeInv}}\" aria-describedby=\"sf-nome-err\" onBlur=\"{{eNomeBlur}}\" onChange=\"{{eNomeChg}}\" autocomplete=\"name\"><sc-if value=\"{{eNomeOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"sf-err\" id=\"sf-nome-err\">{{eNomeMsg}}<\/p><\/sc-if><\/div>\n<div class=\"sf-field\"><label for=\"sf-azienda\">Azienda<span class=\"sf-opt\"> (facoltativo)<\/span><\/label><input class=\"sf-in\" id=\"sf-azienda\" name=\"azienda\" type=\"text\" autocomplete=\"organization\"><\/div>\n<div class=\"sf-field\"><label for=\"sf-email\">Email<span class=\"sf-star\" aria-hidden=\"true\"> *<\/span><\/label><input class=\"sf-in\" id=\"sf-email\" name=\"email\" type=\"email\" required=\"\" aria-invalid=\"{{eEmailInv}}\" aria-describedby=\"sf-email-err\" onBlur=\"{{eEmailBlur}}\" onChange=\"{{eEmailChg}}\" autocomplete=\"email\" inputmode=\"email\"><sc-if value=\"{{eEmailOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"sf-err\" id=\"sf-email-err\">{{eEmailMsg}}<\/p><\/sc-if><\/div>\n<div class=\"sf-field\"><label for=\"sf-tel\">Telefono<span class=\"sf-opt\"> (facoltativo)<\/span><\/label><input class=\"sf-in\" id=\"sf-tel\" name=\"telefono\" type=\"tel\" autocomplete=\"tel\" inputmode=\"tel\"><\/div>\n<div class=\"sf-field\"><label for=\"sf-att\">Tipo di attività<span class=\"sf-star\" aria-hidden=\"true\"> *<\/span><\/label><select class=\"sf-in\" id=\"sf-att\" name=\"attivita\" required=\"\" aria-invalid=\"{{eAttInv}}\" aria-describedby=\"sf-att-err\" onBlur=\"{{eAttBlur}}\" onChange=\"{{eAttChg}}\"><option value=\"\">Scegli<\/option><option>Pizzeria<\/option><option>Panetteria<\/option><option>Pasticceria<\/option><option>Catena o franchising<\/option><option>Rivenditore<\/option><option>Altro<\/option><\/select><sc-if value=\"{{eAttOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"sf-err\" id=\"sf-att-err\">{{eAttMsg}}<\/p><\/sc-if><\/div>\n<div class=\"sf-field\"><label for=\"sf-msg\">Messaggio<span class=\"sf-opt\"> (facoltativo)<\/span><\/label><textarea class=\"sf-in\" id=\"sf-msg\" name=\"messaggio\" rows=\"4\"><\/textarea><p class=\"sf-hint\">Per esempio quante pizze sforni nelle ore di punta.<\/p><\/div>\n<div class=\"sf-field sf-check\"><input type=\"checkbox\" id=\"sf-priv\" name=\"privacy\" required=\"\" aria-invalid=\"{{ePrivInv}}\" aria-describedby=\"sf-priv-err\" onChange=\"{{ePrivBlur}}\"><label for=\"sf-priv\">Ho letto l’<a class=\"lnk\" href=\"#\">informativa privacy<\/a> e acconsento al trattamento dei dati per ricevere una risposta.<\/label>\n<sc-if value=\"{{ePrivOn}}\" hint-placeholder-val=\"{{ false }}\"><p class=\"sf-err\" id=\"sf-priv-err\">{{ePrivMsg}}<\/p><\/sc-if><\/div>\n<button class=\"pill pill-red sf-submit\" type=\"submit\">Invia richiesta<\/button>\n<\/form>\n<\/sc-if>\n<sc-if value=\"{{sent}}\" hint-placeholder-val=\"{{ false }}\">\n<div class=\"sf-ok\"><h3>Richiesta inviata.<\/h3><p>Il team Gradus ti ricontatta all’indirizzo email che hai indicato.<\/p><button class=\"pill pill-line\" type=\"button\" onClick=\"{{reset}}\">Invia un’altra richiesta<\/button><\/div>\n<\/sc-if>\n<\/div>\n<\/div>\n<\/section>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { sent: false, err: {} }; }
+check(f, v) {
+if (f === 'nome' && !String(v).trim()) return 'Scrivi nome e cognome.';
+if (f === 'email') { const t = String(v).trim(); if (!t) return 'Scrivi la tua email.'; if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(t)) return 'Controlla l\u2019email: per esempio nome@azienda.it.'; }
+if (f === 'att' && !v) return 'Scegli il tipo di attività.';
+if (f === 'priv' && !v) return 'Per inviare la richiesta serve il consenso al trattamento dei dati.';
+return '';
+}
+onField(f, always) {
+return (e) => {
+const t = e.target, v = t.type === 'checkbox' ? t.checked : t.value;
+const cur = (this.state.err || {})[f];
+if (!always && !cur) return;
+const msg = this.check(f, v);
+if (msg !== (cur || '')) this.setState({ err: Object.assign({}, this.state.err, { [f]: msg }) });
+};
+}
+submit(e) {
+e.preventDefault();
+const el = e.currentTarget.elements;
+const vals = { nome: el.nome.value, email: el.email.value, att: el.attivita.value, priv: el.privacy.checked };
+const err = {}; Object.keys(vals).forEach((k) => { err[k] = this.check(k, vals[k]); });
+const first = ['nome', 'email', 'att', 'priv'].find((k) => err[k]);
+if (first) { this.setState({ err }); const ids = { nome: 'sf-nome', email: 'sf-email', att: 'sf-att', priv: 'sf-priv' }; const f = e.currentTarget.querySelector('#' + ids[first]); if (f) f.focus(); return; }
+this.setState({ sent: true, err: {} });
+}
+renderVals() {
+const err = this.state.err || {}, p = this.props;
+return {
+forno: p.forno ?? 'CRATOS',
+titolo: p.titolo ?? 'Parla di CRATOS con il team Gradus.',
+testo: p.testo ?? 'Raccontaci cosa produci e quanto: ti aiutiamo a scegliere versione, finitura e base, e ti inviamo il catalogo completo.',
+formOn: !this.state.sent, sent: this.state.sent,
+submit: (e) => this.submit(e),
+reset: () => this.setState({ sent: false, err: {} }),
+eNomeOn: !!err.nome, eNomeMsg: err.nome || '', eNomeInv: err.nome ? 'true' : 'false', eNomeBlur: this.onField('nome', true), eNomeChg: this.onField('nome', false),
+eEmailOn: !!err.email, eEmailMsg: err.email || '', eEmailInv: err.email ? 'true' : 'false', eEmailBlur: this.onField('email', true), eEmailChg: this.onField('email', false),
+eAttOn: !!err.att, eAttMsg: err.att || '', eAttInv: err.att ? 'true' : 'false', eAttBlur: this.onField('att', true), eAttChg: this.onField('att', true),
+ePrivOn: !!err.priv, ePrivMsg: err.priv || '', ePrivInv: err.priv ? 'true' : 'false', ePrivBlur: this.onField('priv', true)
+};
+}
+}
+
+return Component;
+});
+DCLite.define("Comp-Footer", "<div class=\"cmp-foot\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<footer id=\"servizi\" class=\"reveal\" style=\"background:#141413;color:#c9ccce\">\n<div class=\"wrap\" style=\"padding-top:72px;padding-bottom:40px;display:flex;flex-direction:column;gap:56px\">\n<div class=\"grid2\" style=\"border-top:0\">\n<div class=\"label\" style=\"display:flex;flex-direction:column;gap:20px;padding-top:0\">\n<img src=\"../img/ebc5345931cee1e93e55b13867c2ad7e.svg\" alt=\"Gradus\" style=\"display:block;height:20px;width:auto;align-self:flex-start\" width=\"576\" height=\"44\" loading=\"lazy\" decoding=\"async\">\n<p style=\"margin:0;font-size:14px;line-height:1.7;font-weight:400\">Gradus / Resto Italia<br>Via dell’Industria, 23, Loc. Canavaccio<br>61029 Urbino (PU), Italia<\/p>\n<p style=\"margin:0;font-size:14px;line-height:1.7;font-weight:400\">Tel. +39 0722 354048<br>info@restoitalia.com<\/p>\n<\/div>\n<div class=\"content ft-cols\" style=\"display: flex; flex-wrap: wrap; gap: 40px 72px; font-size: 15px; padding-top: 0; justify-content: flex-end; border-style: none\">\n<div class=\"ft-col\"><a class=\"ft-h ft-hl\" href=\"../forni/\">Prodotti<\/a><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftPExp}}\" aria-controls=\"ft-P\" onClick=\"{{ftPT}}\">Prodotti<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-P\" data-open=\"{{ftPExp}}\"><a class=\"ft-all\" href=\"../forni/\">Tutti i forni<\/a><a href=\"../cratos/\">CRATOS<\/a><a href=\"../jack/\">JACK<\/a><a href=\"../modular/\">MODULAR<\/a><a href=\"../rotor/\">ROTOR<\/a><\/div><\/div>\n<div class=\"ft-col\"><b class=\"ft-h\">Azienda<\/b><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftAExp}}\" aria-controls=\"ft-A\" onClick=\"{{ftAT}}\">Azienda<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-A\" data-open=\"{{ftAExp}}\"><a href=\"../il-gruppo/\">Il Gruppo<\/a><a href=\"../tecnologia-design/\">Tecnologia &amp; Design<\/a><a href=\"../news/\">News &amp; Eventi<\/a><a href=\"../servizi/\">Servizi<\/a><a href=\"../contatti/\">Contatti<\/a><\/div><\/div>\n<div class=\"ft-col\"><b class=\"ft-h\">Informazioni<\/b><button class=\"ft-q\" type=\"button\" aria-expanded=\"{{ftIExp}}\" aria-controls=\"ft-I\" onClick=\"{{ftIT}}\">Informazioni<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/button><div class=\"ft-links\" id=\"ft-I\" data-open=\"{{ftIExp}}\"><a href=\"../contatti/#sedi\">Recapiti e sedi<\/a><a href=\"#\">Privacy<\/a><a href=\"#\">Cookie<\/a><a href=\"#\">Preferenze cookie<\/a><\/div><\/div>\n<\/div>\n<\/div>\n<div style=\"border-top:1px solid rgba(255,255,255,.16);padding-top:24px;font-size:13px;line-height:1.6;color:#c9ccce;display:flex;flex-direction:column;gap:6px\">\n<span>© Resto Italia, P.IVA 01444690414<\/span>\n<span>[Informazioni aziendali e legali da completare con i dati ufficiali]<\/span>\n<\/div>\n<\/div>\n<\/footer>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { ft: null }; }
+renderVals() {
+const ft = this.state.ft, t = (k) => () => this.setState({ ft: ft === k ? null : k });
+return {
+ftPExp: ft === 'P' ? 'true' : 'false', ftPT: t('P'),
+ftAExp: ft === 'A' ? 'true' : 'false', ftAT: t('A'),
+ftIExp: ft === 'I' ? 'true' : 'false', ftIT: t('I')
+};
+}
+}
+
+return Component;
+});
+DCLite.define("Gradus-Tecnologia-Design", "<div style=\"min-width:320px;background:#1d1d1c;color:#fff;font-family:'Montserrat',system-ui,sans-serif\">\n\n<dc-import name=\"Comp-Header\" style=\"display: contents\" hint-size=\"100%,81px\"><\/dc-import>\n<main id=\"contenuto\">\n\n<!-- 17 GRADUS: TECNOLOGIA & DESIGN -->\n<section class=\"td-hero\" aria-labelledby=\"td-titolo\" style=\"height: 720px\">\n<img class=\"td-hero-img\" src=\"../img/4e5c8637a6b07fa9184a5efea5d8be39.webp\" alt=\"\" width=\"1024\" height=\"572\" fetchpriority=\"high\">\n<div class=\"wrap\">\n<nav class=\"sf-crumbs\" aria-label=\"Percorso\"><ol><li><a href=\"../home/\">Home<\/a><\/li><li><a href=\"../gradus/\">Gradus<\/a><\/li><li><span aria-current=\"page\">Tecnologia &amp; Design<\/span><\/li><\/ol><\/nav>\n<h1 class=\"td-h1\" id=\"td-titolo\">La tecnologia vale quando fa lavorare meglio.<\/h1>\n<p class=\"td-lead\">Per questo Gradus parte dal risultato e da ciò che serve per renderlo più controllabile.<\/p>\n<div class=\"td-cta\"><a class=\"pill pill-red\" href=\"#criteri\" onClick=\"{{goSez}}\">Scopri i quattro criteri<\/a><a class=\"pill pill-line\" href=\"#modelli\" onClick=\"{{goSez}}\">Tecnologie per forno<\/a><\/div>\n<\/div>\n<\/section>\n\n<dc-import name=\"Comp-Barra-sezione\" voci=\"{{voci}}\" style=\"display: contents\" hint-size=\"100%,65px\"><\/dc-import>\n\n<!-- I QUATTRO CRITERI -->\n<section class=\"td-sec reveal\" id=\"criteri\" aria-labelledby=\"t-crit\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Criteri di progetto<\/div><div class=\"content\"><h2 class=\"td-h2\" id=\"t-crit\">Quattro criteri, una gamma.<\/h2><p class=\"td-intro\">Controllo, ripetibilità, performance e semplicità guidano ogni forno Gradus, dalla pizzeria alla pasticceria.<\/p><\/div><\/div>\n<ol class=\"td-crit\">\n<li><a href=\"#controllo\" onClick=\"{{goSez}}\"><span class=\"td-crit-n\">01<\/span><span class=\"td-crit-k\">Controllo<\/span><span class=\"td-crit-t\">Gestire le variabili della cottura.<\/span><span class=\"td-crit-arrow\" aria-hidden=\"true\">Le tecnologie<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"#ripetibilita\" onClick=\"{{goSez}}\"><span class=\"td-crit-n\">02<\/span><span class=\"td-crit-k\">Ripetibilità<\/span><span class=\"td-crit-t\">Un buon risultato conta quando puoi ripeterlo.<\/span><span class=\"td-crit-arrow\" aria-hidden=\"true\">Le tecnologie<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"#performance\" onClick=\"{{goSez}}\"><span class=\"td-crit-n\">03<\/span><span class=\"td-crit-k\">Performance<\/span><span class=\"td-crit-t\">Reggere il picco <br>in ogni situazione.<\/span><span class=\"td-crit-arrow\" aria-hidden=\"true\">Le tecnologie<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"#semplicita\" onClick=\"{{goSez}}\"><span class=\"td-crit-n\">04<\/span><span class=\"td-crit-k\">Semplicità<\/span><span class=\"td-crit-t\">Più controllo, senza più complessità.<\/span><span class=\"td-crit-arrow\" aria-hidden=\"true\">Le tecnologie<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ol>\n<\/div>\n<\/section>\n\n<!-- 01 CONTROLLO -->\n<section class=\"td-sec reveal\" id=\"controllo\" aria-labelledby=\"t-c1\">\n<div class=\"wrap\">\n<article class=\"td-story\">\n<div class=\"td-story-img\"><img src=\"../img/21bceeb23e6aae26906f90d56039e573.jpg\" alt=\"La mano di un pizzaiolo sul pannello di controllo touch di JACK\" width=\"1600\" height=\"1000\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"td-story-txt\">\n<p class=\"td-k\"><b>01<\/b>Controllo<\/p>\n<h2 id=\"t-c1\">Gestire le variabili della cottura.<\/h2>\n<p>Temperatura, potenza, tempi, zone e ricette diventano strumenti nelle mani dell’operatore.<\/p>\n<ul class=\"td-tech\">\n<li><img src=\"../img/3d5854579c267a0ee74c1ad5bcdf7367.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Gestione separata<\/h3><p>Cielo e platea regolati in modo indipendente, per bilanciare la cottura sopra e sotto il prodotto.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/43989a857c922dd57fc56facce58bdc3.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Eco Zone<\/h3><p>Accendi solo le zone della camera che usi: l’energia segue la quantità di prodotto.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/ab44bd4f7aed3b1fa1976e5d30454d1c.svg\" alt=\"\" width=\"56\" height=\"62\" loading=\"lazy\"><div><h3>Split Power<\/h3><p>Bilancia la potenza tra la parte anteriore e quella posteriore della camera.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- 02 RIPETIBILITÀ -->\n<section class=\"td-sec reveal\" id=\"ripetibilita\" aria-labelledby=\"t-c2\">\n<div class=\"wrap\">\n<article class=\"td-story td-story--rev\">\n<div class=\"td-story-img\"><img src=\"../img/77531c5a825721e82532fcef4f988267.jpg\" alt=\"ROTOR aperto con il carrello pieno di cornetti dorati\" width=\"1600\" height=\"1000\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"td-story-txt\">\n<p class=\"td-k\"><b>02<\/b>Ripetibilità<\/p>\n<h2 id=\"t-c2\">Un buon risultato conta quando puoi ripeterlo.<\/h2>\n<p>Per tutto il servizio, il giorno dopo, con operatori e volumi diversi.<\/p>\n<ul class=\"td-tech\">\n<li><img src=\"../img/12301eb88e6ac983009ad36553a6cd1f.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>My Baking<\/h3><p>Fino a 99 ricette salvate e richiamate con un tocco, chiunque sia al forno.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/9626b128a4e4f042398b6135a3194953.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Cottura 3D<\/h3><p>Convezione e rotazione distribuiscono il calore su tutto il volume, teglia dopo teglia.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/62aced2ed9cced66e865686b34b3cec7.svg\" alt=\"\" width=\"56\" height=\"63\" loading=\"lazy\"><div><h3>Vapor Control<\/h3><p>Gestisce la saturazione del vapore in camera, per pane e lievitati.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/15ff68ba79e2d147817db8f27068947e.svg\" alt=\"\" width=\"56\" height=\"62\" loading=\"lazy\"><div><h3>Bread Ready<\/h3><p>Cicli di cottura graduali, anche con farine a basso o nullo contenuto di glutine.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- 03 PERFORMANCE -->\n<section class=\"td-sec reveal\" id=\"performance\" aria-labelledby=\"t-c3\">\n<div class=\"wrap\">\n<article class=\"td-story\">\n<div class=\"td-story-img\"><img src=\"../img/375b9d332f4b59e679d407d8d56e3af3.webp\" alt=\"Una pizza napoletana in cottura sul piano in biscotto di Sorrento di CRATOS\" width=\"1024\" height=\"687\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"td-story-txt\">\n<p class=\"td-k\"><b>03<\/b>Performance<\/p>\n<h2 id=\"t-c3\">Reggere il picco.<\/h2>\n<p>Cotture più rapide e potenza gestita meglio: più prodotto nello stesso turno, senza perdere qualità.<\/p>\n<ul class=\"td-tech\">\n<li><img src=\"../img/861096d68c57bcbe0097c748a678cd35.svg\" alt=\"\" width=\"56\" height=\"60\" loading=\"lazy\"><div><h3>515 °C in 85 minuti<\/h3><p>La temperatura della pizza napoletana, raggiunta con la tecnologia elettrica.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/f96dbf1763d654407cebc3d8f263ea70.svg\" alt=\"\" width=\"56\" height=\"57\" loading=\"lazy\"><div><h3>Biscotto di Sorrento<\/h3><p>Piano di cottura certificato, per le alte temperature della pizza napoletana.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/4fd60629acdd78eb9a290c8836002991.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Eco Power<\/h3><p>Gestisce la potenza a pieno carico e riduce i consumi, senza togliere prestazioni.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/c6e4a3775f96e8b4f36489eac970d973.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Produzione continua<\/h3><p>Le resistenze lavorano su zone indipendenti: se una si ferma, le altre continuano a cuocere.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- 04 SEMPLICITÀ -->\n<section class=\"td-sec reveal\" id=\"semplicita\" aria-labelledby=\"t-c4\">\n<div class=\"wrap\">\n<article class=\"td-story td-story--rev\">\n<div class=\"td-story-img\"><img src=\"../img/66492fdb73a579044a300923dc5a0376.jpg\" alt=\"Le mani di un pizzaiolo usano lo smartphone accanto al pannello di controllo di JACK\" width=\"1508\" height=\"943\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"td-story-txt\">\n<p class=\"td-k\"><b>04<\/b>Semplicità<\/p>\n<h2 id=\"t-c4\">Più controllo, senza più complessità.<\/h2>\n<p>La tecnologia gestisce ciò che è complesso, così il lavoro resta semplice.<\/p>\n<ul class=\"td-tech\">\n<li><img src=\"../img/2607dd4465502f8d5fddbdd106bab0d1.png\" alt=\"\" width=\"56\" height=\"65\" loading=\"lazy\" style=\"height: auto; aspect-ratio: auto; object-fit: contain\"><div><h3>Pannello touch da 5 pollici<\/h3><p>Ogni parametro di cottura su uno schermo a colori, con l’accensione settimanale programmabile.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/465207eb388b50594f6fecc1278c1251.svg\" alt=\"\" width=\"56\" height=\"56\" loading=\"lazy\"><div><h3>Iso Max<\/h3><p>Isolamento che riduce la dispersione del calore: fuori il forno resta intorno ai 40 °C.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/36994a79916a1f21d047c3235b54b9c1.svg\" alt=\"\" width=\"56\" height=\"58\" loading=\"lazy\"><div><h3>Kit verticale e leggero<\/h3><p>Il forno a cupola si divide in due parti e passa da una porta di 90 cm.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/05c7393f96b6d85dd4941b5485cf3956.svg\" alt=\"\" width=\"56\" height=\"58\" loading=\"lazy\"><div><h3>4.0 Ready (optional)<\/h3><p>Predisposizione per l’uso in un processo produttivo di industria 4.0.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- DESIGN -->\n<section class=\"td-sec reveal\" id=\"design\" aria-labelledby=\"t-c5\">\n<div class=\"wrap\">\n<article class=\"td-story\">\n<div class=\"td-story-img\"><img src=\"../img/91d8209334ad7669e16f834a29a602cf.jpg\" alt=\"Una mano appoggiata sul mosaico esterno di CRATOS acceso\" width=\"1654\" height=\"1000\" loading=\"lazy\" decoding=\"async\" style=\"object-fit: cover\"><\/div>\n<div class=\"td-story-txt\">\n<p class=\"td-k\">Design<\/p>\n<h2 id=\"t-c5\">Un forno che si vede dalla sala.<\/h2>\n<p>Il forno a vista diventa parte del locale. Colori, materiali e finiture si scelgono sullo stile di chi lo usa.<\/p>\n<ul class=\"td-tech\">\n<li><img src=\"../img/96d5dcfd46e996865476a4c9addc1118.svg\" alt=\"\" width=\"56\" height=\"59\" loading=\"lazy\"><div><h3>Ampia personalizzazione<\/h3><p>CRATOS in mosaico o in resina; JACK sul colore e sullo stile del locale. Tutte le varianti sono nel catalogo.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<li><img src=\"../img/d5b392fbe098e9fd3dd97e24adcfe13f.svg\" alt=\"\" width=\"56\" height=\"59\" loading=\"lazy\"><div><h3>Doppia cupola<\/h3><p>La cupola divisibile in due elementi, per gli accessi più difficili.<\/p><ul class=\"td-on\" aria-label=\"Su quali forni\"><\/ul><\/div><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- DAL DETTAGLIO AL MODELLO -->\n<section class=\"td-sec reveal\" id=\"modelli\" aria-labelledby=\"t-mod\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Dal dettaglio al modello<\/div><div class=\"content\"><h2 class=\"td-h2\" id=\"t-mod\">Le tecnologie, forno per forno.<\/h2><p class=\"td-intro\">Trova la tecnologia che ti serve e apri la scheda del forno che la monta.<\/p><\/div><\/div>\n<p class=\"td-tscroll-hint\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M4 12h16M14 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg>Scorri la tabella per vedere tutti i forni<\/p>\n<div class=\"td-tscroll\" role=\"region\" aria-labelledby=\"t-tab\" tabindex=\"0\">\n<table class=\"td-table\">\n<caption class=\"sf-sr\" id=\"t-tab\">Tecnologie Gradus per forno<\/caption>\n<thead><tr><th scope=\"col\"><span class=\"sf-sr\">Tecnologia<\/span><\/th><th scope=\"col\"><a href=\"../cratos/\">CRATOS<span>Vedi il forno<\/span><\/a><\/th><th scope=\"col\"><a href=\"../jack/\">JACK<span>Vedi il forno<\/span><\/a><\/th><th scope=\"col\"><a href=\"../modular/\">MODULAR<span>Vedi il forno<\/span><\/a><\/th><th scope=\"col\"><a href=\"../rotor/\">ROTOR<span>Vedi il forno<\/span><\/a><\/th><\/tr><\/thead>\n<tbody>\n<tr><th scope=\"row\">Eco Power<small>Performance<\/small><\/th><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><\/tr>\n<tr><th scope=\"row\">My Baking<small>Ripetibilità<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Gestione separata<small>Controllo<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Split Power<small>Controllo<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Eco Zone<small>Controllo<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Produzione continua<small>Performance<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Biscotto di Sorrento<small>Performance<\/small><\/th><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-opt\">Verace<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Vapor Control<small>Ripetibilità<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Cottura 3D<small>Ripetibilità<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Bread Ready<small>Ripetibilità<\/small><\/th><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Iso Max<small>Semplicità<\/small><\/th><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Kit verticale e leggero<small>Semplicità<\/small><\/th><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">Ampia personalizzazione<small>Design<\/small><\/th><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span class=\"td-yes\"><\/span><span class=\"sf-sr\">Sì<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><td><span aria-hidden=\"true\">–<\/span><span class=\"sf-sr\">No<\/span><\/td><\/tr>\n<tr><th scope=\"row\">4.0 Ready<small>Semplicità<\/small><\/th><td><span class=\"td-opt\">Optional<\/span><\/td><td><span class=\"td-opt\">Optional<\/span><\/td><td><span class=\"td-opt\">Optional<\/span><\/td><td><span class=\"td-opt\">Optional<\/span><\/td><\/tr>\n<\/tbody>\n<\/table>\n<\/div>\n<p class=\"td-table-note\">Il pallino pieno indica la tecnologia di serie; il cerchio vuoto indica una versione o un optional. Il dettaglio per modello è nel catalogo Gradus 2027.<\/p>\n\n\n<div class=\"td-catalogo\">\n<div><h2>Il dettaglio è nel catalogo.<\/h2><p>Versioni, misure, optional e dati tecnici di CRATOS, JACK, MODULAR e ROTOR: li trovi nel catalogo Gradus 2027.<\/p><\/div>\n<div class=\"td-catalogo-cta\"><a class=\"pill pill-white\" href=\"../catalogo/\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><span>Scarica il catalogo<\/span><\/a><a class=\"pill pill-line\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n<\/div>\n<div class=\"td-end\"><\/div>\n<\/div>\n<\/section>\n\n<dc-import name=\"Comp-Richiesta\" forno=\"Tecnologia\" titolo=\"Quale tecnologia serve al tuo lavoro?\" testo=\"Raccontaci cosa produci e quanto: ti aiutiamo a capire quali tecnologie contano davvero e su quale forno le trovi.\" style=\"display: contents\" hint-size=\"100%,969px\"><\/dc-import>\n<\/main>\n<div class=\"sf-sticky\"><a class=\"pill pill-red\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n\n<dc-import name=\"Comp-Footer\" style=\"display: contents\" hint-size=\"100%,420px\"><\/dc-import>\n\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+goSez(e) {
+const a = e.currentTarget, id = (a.getAttribute('href') || '').slice(1), doc = a.ownerDocument, el = id && doc.getElementById(id);
+if (!el) return;
+e.preventDefault();
+const win = doc.defaultView, head = doc.querySelector('.site-head'), bar = doc.querySelector('.sf-anchors');
+let off = 16;
+if (bar && win.getComputedStyle(bar).position === 'sticky') off += (parseFloat(win.getComputedStyle(bar).top) || 0) + bar.offsetHeight;
+else if (head) off += head.offsetHeight;
+let box = el.parentElement;
+while (box && box !== doc.body && box !== doc.documentElement) { const o = win.getComputedStyle(box).overflowY; if ((o === 'auto' || o === 'scroll') && box.scrollHeight > box.clientHeight) break; box = box.parentElement; }
+const soft = win.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+if (!box || box === doc.body || box === doc.documentElement) { win.scrollTo({ top: el.getBoundingClientRect().top + win.scrollY - off, behavior: soft }); }
+else { box.scrollTo({ top: el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - off, behavior: soft }); }
+if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+el.focus({ preventScroll: true });
+}
+renderVals() {
+return {
+voci: [{ href: '#controllo', label: 'Controllo' }, { href: '#ripetibilita', label: 'Ripetibilità' }, { href: '#performance', label: 'Performance' }, { href: '#semplicita', label: 'Semplicità' }, { href: '#design', label: 'Design' }],
+goSez: (e) => this.goSez(e),
+};
+}
+}
+
+return Component;
+});
+DCLite.mount("Gradus-Tecnologia-Design");
+</script>
+</body>
+</html>

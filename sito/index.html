@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141413">
+<meta name="color-scheme" content="dark">
+<title>Gradus · Anteprima del sito</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141413;--bar:#1d1d1c;--line:#3d3b3a;--muted:#b8b5b2;--red:#c2063a;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:#fff;font-family:Montserrat,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+body{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+.vb{flex:0 0 auto;display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;padding:12px max(20px,env(safe-area-inset-left)) 12px max(20px,env(safe-area-inset-right));background:var(--bar);border-bottom:1px solid var(--line)}
+.vb-id{display:flex;align-items:center;gap:16px;min-width:0;margin-right:auto}
+.vb-id img{height:18px;width:auto;display:block}
+.vb-t{display:flex;flex-direction:column;min-width:0;padding-left:16px;border-left:1px solid var(--line)}
+.vb-t b{font-size:15px;font-weight:700;white-space:nowrap}
+.vb-t span{font-size:12px;color:var(--muted);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:6px}
+.nav label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav select{appearance:none;-webkit-appearance:none;min-height:40px;min-width:230px;padding:0 40px 0 16px;border-radius:999px;border:1px solid var(--line);background-color:#262524;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-position:right 16px center;background-repeat:no-repeat;color:#fff;font:600 14px/1 Montserrat,system-ui,sans-serif;cursor:pointer}
+.nav select optgroup,.nav select option{background:#262524;color:#fff}
+.ib{appearance:none;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border-radius:999px;border:1px solid var(--line);background:#262524;color:#fff;cursor:pointer;touch-action:manipulation}
+.ib svg{width:16px;height:16px}
+.ib:disabled{opacity:.35;cursor:default}
+.seg{display:inline-flex;padding:4px;border-radius:999px;background:#262524;border:1px solid var(--line)}
+.seg button{appearance:none;border:0;margin:0;min-height:32px;padding:0 16px;border-radius:999px;background:none;color:#d8d5d2;font:600 14px/1 Montserrat,system-ui,sans-serif;cursor:pointer;touch-action:manipulation;white-space:nowrap;transition:background-color 150ms var(--ease),color 150ms var(--ease)}
+.seg button[aria-pressed="true"]{background:#fff;color:#1d1d1c}
+.seg button:focus-visible,.vb-open:focus-visible,.nav select:focus-visible,.ib:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.vb-open{display:inline-flex;align-items:center;min-height:40px;padding:0 4px;color:#fff;font-size:14px;font-weight:600;text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:6px;white-space:nowrap}
+@media (hover:hover) and (pointer:fine){.seg button:not([aria-pressed="true"]):hover{background:rgba(255,255,255,.08);color:#fff}.ib:not(:disabled):hover{background:#3a3937}}
+.stage{position:relative;flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.stage iframe{display:block;border:0;background:#1d1d1c}
+.phone{position:relative;flex:0 0 auto;width:414px;height:868px;padding:12px;border-radius:52px;background:#0b0b0b;box-shadow:0 0 0 1px #3d3b3a,0 30px 80px rgba(0,0,0,.55);transform-origin:50% 50%}
+.phone iframe{width:390px;height:844px;border-radius:40px}
+.stage[data-device="desktop"] .phone{width:100%;height:100%;padding:0;border-radius:0;background:none;box-shadow:none;transform:none!important}
+.stage[data-device="desktop"] .phone iframe{width:100%;height:100%;border-radius:0}
+.note{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-size:12px;color:var(--muted);pointer-events:none}
+.stage[data-device="desktop"] .note{display:none}
+@media (max-width:860px){
+  .vb{gap:10px;padding-top:10px;padding-bottom:10px}
+  .vb-t,.vb-open,#dev{display:none}
+  .vb-id{margin-right:0;width:100%}
+  .nav{flex:1 1 auto}
+  .nav select{flex:1 1 auto;min-width:0}
+  .phone{width:100%!important;height:100%!important;padding:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important}
+  .phone iframe{width:100%!important;height:100%!important;border-radius:0!important}
+  .note{display:none}
+}
+@media (prefers-reduced-motion:reduce){.seg button{transition:none}}
+</style>
+</head>
+<body>
+<header class="vb">
+  <div class="vb-id"><img src="img/logo-gradus.png" alt="Gradus" width="233" height="18"><div class="vb-t"><b>Anteprima del sito</b><span>23 pagine · desktop e mobile</span></div></div>
+  <div class="nav">
+    <button type="button" class="ib" id="prev" aria-label="Pagina precedente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <label for="pg">Pagina</label>
+    <select id="pg">
+      <optgroup label="Home"><option value="home">Homepage</option></optgroup>
+      <optgroup label="Soluzioni"><option value="professionisti">Professionisti</option><option value="catene">Catene</option><option value="rivenditori">Rivenditori</option></optgroup>
+      <optgroup label="Forni"><option value="forni">Elenco forni</option><option value="cratos">CRATOS</option><option value="jack">JACK</option><option value="modular">MODULAR</option><option value="rotor">ROTOR</option></optgroup>
+      <optgroup label="Applicazioni"><option value="pizzeria">Pizzeria</option><option value="panetteria">Panetteria</option><option value="pasticceria">Pasticceria</option></optgroup>
+      <optgroup label="Servizi"><option value="servizi">Servizi</option><option value="assistenza">Assistenza</option><option value="catalogo">Catalogo</option><option value="gradus-point">Gradus Point</option><option value="faq">FAQ</option></optgroup>
+      <optgroup label="Gradus"><option value="gradus">Gradus</option><option value="il-gruppo">Il Gruppo</option><option value="tecnologia-design">Tecnologia &amp; Design</option><option value="news">News &amp; Eventi</option><option value="news-sigep">News: Sigep World 2027</option></optgroup>
+      <optgroup label="Contatti"><option value="contatti">Contatti</option></optgroup>
+    </select>
+    <button type="button" class="ib" id="next" aria-label="Pagina successiva"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div class="seg" id="dev" role="group" aria-label="Dispositivo">
+    <button type="button" data-d="desktop" aria-pressed="true">Desktop</button>
+    <button type="button" data-d="mobile" aria-pressed="false">Mobile</button>
+  </div>
+  <a class="vb-open" id="open" href="home/" target="_blank" rel="noopener">Apri a pagina intera</a>
+</header>
+<main class="stage" id="stage" data-device="desktop">
+  <div class="phone" id="phone"><iframe id="frame" title="Anteprima della pagina" src="home/"></iframe></div>
+  <p class="note">Anteprima di lavoro: i download del catalogo e l’invio dei moduli non sono attivi.</p>
+</main>
+<script>
+(function () {
+  var SLUGS = ["home", "professionisti", "catene", "rivenditori", "forni", "cratos", "jack", "modular", "rotor", "pizzeria", "panetteria", "pasticceria", "servizi", "assistenza", "catalogo", "gradus-point", "faq", "gradus", "il-gruppo", "tecnologia-design", "news", "news-sigep", "contatti"];
+  var stage = document.getElementById('stage'), phone = document.getElementById('phone'),
+      frame = document.getElementById('frame'), open = document.getElementById('open'),
+      sel = document.getElementById('pg'), prev = document.getElementById('prev'), next = document.getElementById('next');
+  var st = { p: 'home', d: 'desktop' };
+  function fromHash() {
+    var h = (location.hash || '').replace('#', ''), d = h.match(/-(mobile|desktop)$/);
+    if (d) { st.d = d[1]; h = h.slice(0, -d[0].length); }
+    if (SLUGS.indexOf(h) !== -1) st.p = h;
+  }
+  function fit() {
+    if (st.d !== 'mobile' || window.innerWidth <= 860) { phone.style.transform = ''; return; }
+    var s = Math.min(1, (stage.clientHeight - 48) / 868, (stage.clientWidth - 32) / 414);
+    phone.style.transform = 'scale(' + s.toFixed(3) + ')';
+  }
+  function sync() {
+    sel.value = st.p;
+    var i = SLUGS.indexOf(st.p);
+    prev.disabled = i <= 0; next.disabled = i >= SLUGS.length - 1;
+    document.querySelectorAll('#dev button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.d === st.d)); });
+    stage.dataset.device = st.d;
+    open.setAttribute('href', st.p + '/');
+    history.replaceState(null, '', '#' + st.p + '-' + st.d);
+    fit();
+  }
+  function go(reload) {
+    var src = st.p + '/';
+    if (reload || frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+    sync();
+  }
+  sel.addEventListener('change', function () { st.p = sel.value; go(); });
+  prev.addEventListener('click', function () { var i = SLUGS.indexOf(st.p); if (i > 0) { st.p = SLUGS[i - 1]; go(); } });
+  next.addEventListener('click', function () { var i = SLUGS.indexOf(st.p); if (i < SLUGS.length - 1) { st.p = SLUGS[i + 1]; go(); } });
+  document.getElementById('dev').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b || b.dataset.d === st.d) return;
+    st.d = b.dataset.d; go(true); // ricarico: la pagina deve rileggere la larghezza dello schermo
+  });
+  // quando si naviga dentro l'anteprima (menù, card, footer) il selettore segue la pagina
+  frame.addEventListener('load', function () {
+    try {
+      var m = frame.contentWindow.location.pathname.match(/\/([^\/]+)\/(?:index\.html)?$/);
+      if (m && SLUGS.indexOf(m[1]) !== -1 && m[1] !== st.p) { st.p = m[1]; frame.setAttribute('src', st.p + '/'); }
+      sync();
+    } catch (e) {}
+  });
+  window.addEventListener('resize', fit);
+  fromHash(); go();
+})();
+</script>
+</body>
+</html>
