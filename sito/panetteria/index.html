@@ -120,6 +120,46 @@ html,body{overflow-x:clip}
 body{margin:0;background:#1d1d1c}
 html,body{overflow-x:clip}
 :root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
+:where(.cmp-bar) a{color:inherit;text-decoration:none}
+:where(.cmp-bar) a:focus-visible,:where(.cmp-bar) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+:where(.cmp-bar) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
+:where(.cmp-bar) .pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:600;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+:where(.cmp-bar) .pill-red{background:#c2063a;color:#fff}
+:where(.cmp-bar) summary{list-style:none;cursor:pointer}
+:where(.cmp-bar) summary::-webkit-details-marker{display:none}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-bar) *,:where(.cmp-bar) *::before,:where(.cmp-bar) *::after{transition-property:color,background-color,border-color,text-decoration-color,opacity!important;transition-duration:var(--dur-fast)!important}
+}
+@media (max-width:767px){
+:where(.cmp-bar) .wrap{padding-left:20px;padding-right:20px}
+}
+@media (hover:hover) and (pointer:fine){
+:where(.cmp-bar) .pill-red:hover{background:#a40531}
+}
+:where(.cmp-bar) a,:where(.cmp-bar) button,:where(.cmp-bar) summary{touch-action:manipulation}
+:where(.cmp-bar) button,:where(.cmp-bar) .pill{-webkit-user-select:none;user-select:none}
+:where(.cmp-bar) .pill{transition:background-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),transform 120ms var(--ease-out)}
+:where(.cmp-bar) .pill:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+:where(.cmp-bar) .pill:active{transform:none}
+}
+.sf-anchors{position:sticky;top:80px;z-index:15;background:rgba(20,20,19,.94);border-bottom:1px solid rgba(255,255,255,.1)}
+.sf-anchors .wrap{display:flex;align-items:center;gap:4px;min-height:64px;overflow-x:auto;scrollbar-width:none}
+.sf-anchors .wrap::-webkit-scrollbar{display:none}
+.sf-anchors a{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-size:14px;font-weight:600;color:#e4e7e9;border-radius:999px}
+.sf-anchors .sf-anchors-cta{margin-left:auto;color:#fff;padding:0 22px}
+@media (hover:hover) and (pointer:fine){
+.sf-anchors a:not(.pill):hover{color:#fff;background:rgba(255,255,255,.08)}
+}
+@media (max-width:767px){
+.sf-anchors .sf-anchors-cta{display:none}
+.sf-anchors .wrap{min-height:56px;padding-left:12px;padding-right:12px}
+}
+</style>
+<style>
+body{margin:0;background:#1d1d1c}
+html,body{overflow-x:clip}
+:root{--red:#c2063a;--red-hover:#a40531;--red-on-dark:#D2003C;--ink:#1d1d1c;--ink-2:#262625;--ink-3:#141413;--hair:rgba(255,255,255,.16);--text-2:#c9ccce;--text-1:#ffffff;--ease:cubic-bezier(.2,.8,.2,1);--ease-out:cubic-bezier(.2,.8,.2,1);--ease-in:cubic-bezier(.4,0,1,1);--ease-inout:cubic-bezier(.4,0,.2,1);--dur-fast:150ms;--dur-base:250ms;--dur-slow:400ms;--dur-page:450ms}
 :where(.cmp-req) a{color:inherit;text-decoration:none}
 :where(.cmp-req) a:focus-visible,:where(.cmp-req) summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
 :where(.cmp-req) .wrap{max-width:1360px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));box-sizing:border-box}
@@ -209,6 +249,8 @@ select.sf-in option{background:#1d1d1c;color:#fff}
 @keyframes reveal-fondo{from{opacity:0;filter:blur(14px)}to{opacity:1;filter:blur(0)}}
 @keyframes reveal-zoom{from{transform:scale(.9)}to{transform:none}}
 @keyframes reveal-fondo-m{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:blur(0)}}
+/* Campi del form (11/11): bordo a 1 px (resta a 2 px in caso di errore) */
+.sf-in:not([aria-invalid="true"]){border-width:1px}
 </style>
 <style>
 body{margin:0;background:#1d1d1c}
@@ -436,6 +478,17 @@ html{scroll-padding-top:90px}
 #servizi{padding-bottom:84px}
 }
 #contenuto [tabindex="-1"]:focus{outline:none}
+/* Altezza uniforme dell'apertura (11/11): 750 desktop, 700 tablet, 650 mobile */
+.ap-hero{box-sizing:border-box;min-height:0!important;max-height:none!important}
+@media (min-width:1200px){.ap-hero{height:750px!important}}
+@media (min-width:768px) and (max-width:1199px){.ap-hero{height:700px!important}}
+@media (max-width:767px){.ap-hero{height:650px!important}}
+/* Barra di sezione (11/11) */
+#stili,#servizio,#catene,#catalogo{scroll-margin-top:160px}
+@media (max-width:767px){#stili,#servizio,#catene,#catalogo{scroll-margin-top:130px}}
+/* Hover sui blocchi foto (11/11): bordo e bagliore come nei form, solo al passaggio del mouse */
+.ap-stile .ap-img,.ap-cat-chain{outline:1px solid transparent;outline-offset:-1px;transition:outline-color 250ms cubic-bezier(.2,.8,.2,1),box-shadow 250ms cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover) and (pointer:fine){.ap-stile .ap-img:hover,.ap-cat-chain:hover{outline-color:#D52F5D;box-shadow:0 0 32px 4px rgba(213,47,93,.22)}}
 </style>
 </head>
 <body>
@@ -483,6 +536,52 @@ mnBack: () => this.setState({ mnLv: null }),
 mnCloseAll: () => this.setState({ mnOpen: null, mnMob: false, mnLv: null }),
 mnKey: (e) => { if (e.key === 'Escape') this.setState({ mnOpen: null, mnMob: false, mnLv: null }); }
 };
+}
+}
+
+return Component;
+});
+DCLite.define("Comp-Barra-sezione", "<div class=\"cmp-bar\" style=\"display: contents; font-family: 'Montserrat', system-ui, sans-serif; color: #fff\">\n<nav class=\"sf-anchors\" aria-label=\"Contenuti della pagina\">\n<div class=\"wrap\"><sc-for list=\"{{voci}}\" as=\"v\" hint-placeholder-count=\"4\"><a href=\"{{v.href}}\" onClick=\"{{v.go}}\">{{v.label}}<\/a><\/sc-for><a class=\"pill pill-red sf-anchors-cta\" href=\"#richiesta\" onClick=\"{{goCta}}\">Richiedi informazioni<\/a><\/div>\n<\/nav>\n<\/div>", function (DCLogic) {
+
+class Component extends DCLogic {
+// position:sticky funziona solo se il genitore diretto è alto quanto la pagina: se il motore avvolge il componente in un contenitore alto quanto la barra, quel contenitore diventa trasparente al layout (display: contents)
+fixSticky() {
+const doc = typeof document !== 'undefined' ? document : null; if (!doc) return;
+doc.querySelectorAll('.sf-anchors').forEach((el) => {
+let p = el.parentElement;
+while (p && p !== doc.body && p !== doc.documentElement) {
+const cs = doc.defaultView.getComputedStyle(p);
+if (cs.display === 'contents') { p = p.parentElement; continue; }
+if (p.offsetHeight <= el.offsetHeight + 4) { p.style.setProperty('display', 'contents', 'important'); p = p.parentElement; continue; }
+break;
+}
+});
+}
+componentDidMount() { this.fixSticky(); this._fx = [300, 1000, 2500].map((t) => setTimeout(() => this.fixSticky(), t)); }
+componentDidUpdate() { this.fixSticky(); }
+componentWillUnmount() { (this._fx || []).forEach(clearTimeout); }
+goSez(e) {
+const a = e.currentTarget, id = (a.getAttribute('href') || '').slice(1), doc = a.ownerDocument, el = id && doc.getElementById(id);
+if (!el) return;
+e.preventDefault();
+const win = doc.defaultView, head = doc.querySelector('.site-head'), bar = doc.querySelector('.sf-anchors');
+// spazio occupato in alto da header e barra di sezione, più un margine di respiro
+let off = 16;
+if (bar && win.getComputedStyle(bar).position === 'sticky') off += (parseFloat(win.getComputedStyle(bar).top) || 0) + bar.offsetHeight;
+else if (head) off += head.offsetHeight;
+// contenitore che scorre davvero: il primo antenato con scorrimento verticale, altrimenti la pagina
+let box = el.parentElement;
+while (box && box !== doc.body && box !== doc.documentElement) { const o = win.getComputedStyle(box).overflowY; if ((o === 'auto' || o === 'scroll') && box.scrollHeight > box.clientHeight) break; box = box.parentElement; }
+const soft = win.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+if (!box || box === doc.body || box === doc.documentElement) { win.scrollTo({ top: el.getBoundingClientRect().top + win.scrollY - off, behavior: soft }); }
+else { box.scrollTo({ top: el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - off, behavior: soft }); }
+if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+el.focus({ preventScroll: true });
+}
+renderVals() {
+const voci = Array.isArray(this.props.voci) ? this.props.voci : [];
+const go = (e) => this.goSez(e);
+return { voci: voci.map((v) => Object.assign({}, v, { go })), goCta: go };
 }
 }
 
@@ -552,7 +651,7 @@ ftIExp: ft === 'I' ? 'true' : 'false', ftIT: t('I')
 
 return Component;
 });
-DCLite.define("Applicazione-Panetteria", "<div style=\"min-width:320px;background:#1d1d1c;color:#fff;font-family:'Montserrat',system-ui,sans-serif\">\n\n<dc-import name=\"Comp-Header\" style=\"display: contents\" hint-size=\"100%,81px\"><\/dc-import>\n<main id=\"contenuto\">\n\n<!-- 07 APPLICAZIONE: PANETTERIA -->\n<section class=\"ap-hero\" aria-labelledby=\"ap-titolo\">\n<img class=\"ap-hero-img\" src=\"../img/4b2beba74d8eabbbf72f3b8af86fae92.jpg\" alt=\"\" width=\"1067\" height=\"1600\" fetchpriority=\"high\" style=\"object-position: 50% 60%\">\n<div class=\"wrap\">\n<nav class=\"sf-crumbs\" aria-label=\"Percorso\"><ol><li><a href=\"../home/\">Home<\/a><\/li><li><span>Applicazioni<\/span><\/li><li><span aria-current=\"page\">Panetteria<\/span><\/li><\/ol><\/nav>\n<h1 class=\"ap-h1\" id=\"ap-titolo\">Il forno per la tua panetteria.<\/h1>\n\n<p class=\"ap-lead\">Pane comune, grandi pezzature, farine integrali e senza glutine: ogni impasto chiede la sua cottura. Parti da quello che sforni, il forno viene di conseguenza.<\/p>\n<div class=\"ap-cta\"><a class=\"pill pill-red\" href=\"#stili\" onClick=\"{{goSez}}\">Trova il tuo forno<\/a><a class=\"pill pill-white\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n<\/div>\n<style>@media (min-width: 1024px){.ap-hero .ap-hero-img{transform:translateX(18%) !important;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 28%);mask-image:linear-gradient(to right,transparent 0%,#000 28%)}}<\/style><\/section>\n\n<!-- CHE PANE FAI -->\n<section class=\"ap-sec reveal\" id=\"stili\" aria-labelledby=\"t-stili\" style=\"padding-top: 0px\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Produzioni<\/div><div class=\"content\"><h2 class=\"ap-h2\" id=\"t-stili\">Che pane fai?<\/h2><p class=\"ap-intro\">Vapore, cicli di temperatura e capacità cambiano con il prodotto. Ecco da quale forno partire.<\/p><\/div><\/div>\n\n<article class=\"ap-stile\">\n<div class=\"ap-img\"><img src=\"../img/6300166db352703cec72c4db224d0c78.jpg\" alt=\"Due camere di MODULAR: in quella superiore una teglia di pizza, in quella inferiore il pane\" width=\"1335\" height=\"834\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Pane e grandi pezzature<\/p>\n<h3>Platea in refrattario e vapore sotto controllo.<\/h3>\n<p>Il pane chiede calore dalla platea e vapore al momento giusto. MODULAR ha la platea in refrattario, camere alte fino a 28 cm per i grandi lievitati e Vapor Control per regolare la saturazione in camera. JACK, con il generatore di vapore e i programmi per la panificazione (optional), cuoce pane e pizza nello stesso forno.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../modular/\"><span><b>MODULAR<\/b><small>Camere da 18 o 28 cm, Vapor Control<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"../jack/\"><span><b>JACK<\/b><small>Con generatore di vapore (optional)<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n\n<article class=\"ap-stile ap-stile--rev\">\n<div class=\"ap-img\"><img src=\"../img/c3f3fb0437cb7ed6373f653444eb7796.jpg\" alt=\"ROTOR in funzione con il carrello di cornetti visibile dal vetro dello sportello\" width=\"1334\" height=\"833\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Volumi e piccola panetteria<\/p>\n<h3>Tante teglie, la stessa cottura su ognuna.<\/h3>\n<p>ROTOR combina convezione e rotazione: il calore arriva uguale su ogni teglia del carrello, dalla superficie al cuore del prodotto. Da 7 a 18 teglie 60 × 40, elettrico o a gas.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../rotor/\"><span><b>ROTOR<\/b><small>Modelli 710 e 1518, elettrico o a gas<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"../modular/\"><span><b>MODULAR<\/b><small>Aggiungi camere quando cresce la produzione<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n\n<article class=\"ap-stile\">\n<div class=\"ap-img\"><img src=\"../img/7f9e39f2a2d643f154cfed0fe02d74a0.jpg\" alt=\"Mani che spolverano farina accanto a un cestino di panini ai semi\" width=\"1706\" height=\"853\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Integrale e senza glutine<\/p>\n<h3>Farine speciali, cottura più graduale.<\/h3>\n<p>Le farine integrali, a basso o senza glutine chiedono una cottura più graduale e delicata. Bread Ready di ROTOR è pensato per questo: programmi dedicati, salvati con My Baking e richiamati con un tocco.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../rotor/\"><span><b>ROTOR<\/b><small>Con Bread Ready e programmi per pane e pasticceria<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- COSA CONTA IN PANETTERIA -->\n<section class=\"ap-sec reveal\" id=\"servizio\" aria-labelledby=\"t-serv\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Nel laboratorio<\/div><div class=\"content\"><h2 class=\"ap-h2\" id=\"t-serv\">Quello che conta prima dell’apertura.<\/h2><\/div><\/div>\n<ul class=\"ap-plus\">\n<li><img src=\"../img/12301eb88e6ac983009ad36553a6cd1f.svg\" alt=\"\" width=\"64\" height=\"64\" loading=\"lazy\"><div><h3>La stessa ricetta, a ogni turno<\/h3><p>Con My Baking salvi fino a 99 programmi, con cicli di temperatura e di vapore dedicati alla panificazione.<\/p><\/div><\/li>\n<li><img src=\"../img/62aced2ed9cced66e865686b34b3cec7.svg\" alt=\"\" width=\"64\" height=\"72\" loading=\"lazy\"><div><h3>Il vapore giusto per ogni prodotto<\/h3><p>Con Vapor Control di MODULAR regoli la saturazione di vapore in camera.<\/p><\/div><\/li>\n<li><img src=\"../img/9626b128a4e4f042398b6135a3194953.svg\" alt=\"\" width=\"64\" height=\"64\" loading=\"lazy\"><div><h3>Uniforme su tutto il carrello<\/h3><p>Con la Cottura 3D di ROTOR il calore arriva uguale dalla prima all’ultima teglia.<\/p><\/div><\/li>\n<li><img src=\"../img/15ff68ba79e2d147817db8f27068947e.svg\" alt=\"\" width=\"64\" height=\"71\" loading=\"lazy\"><div><h3>Pronto per le farine speciali<\/h3><p>Bread Ready di ROTOR per il pane con farine integrali e senza glutine.<\/p><\/div><\/li>\n<\/ul>\n<\/div>\n<\/section>\n\n<!-- PER LE CATENE -->\n<section class=\"ap-sec reveal\" id=\"catene\" aria-labelledby=\"t-catene\">\n<div class=\"wrap\">\n<div class=\"ap-cat-chain\">\n<div class=\"ap-img\"><img src=\"../img/13e5ede613ea1663df3609f2b06e21b0.webp\" alt=\"La mano di un panificatore imposta il programma sul pannello touch di MODULAR\" width=\"1600\" height=\"1000\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-chain-txt\">\n<p class=\"ap-k\">Per le catene<\/p>\n<h2 id=\"t-catene\">Il tuo standard. In ogni punto vendita.<\/h2>\n<p>Se il tuo pane deve uscire uguale in ogni punto vendita, si parte dal tuo prodotto: definiamo la cottura, la salviamo nei programmi e verifichiamo che si ripeta con operatori e turni diversi.<\/p>\n<a class=\"lnk\" href=\"../catene/\">Scopri le soluzioni per le catene<\/a>\n<\/div>\n<\/div>\n<\/div>\n<\/section>\n\n<!-- FASCIA CATALOGO -->\n<section class=\"ap-sec reveal\" id=\"catalogo\" aria-labelledby=\"t-cat\">\n<div class=\"wrap\">\n<div class=\"ap-catalogo\">\n<div><h2 id=\"t-cat\">Il dettaglio è nel catalogo.<\/h2><p>Versioni, misure, optional e dati tecnici di JACK, MODULAR e ROTOR: li trovi nel catalogo Gradus 2027.<\/p><\/div>\n<div class=\"ap-catalogo-cta\"><a class=\"pill pill-white\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><span>Scarica il catalogo<\/span><\/a><a class=\"pill pill-line\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n<\/div>\n<\/div>\n<\/section>\n\n<dc-import name=\"Comp-Richiesta\" forno=\"Panetteria\" titolo=\"Parliamo della tua panetteria.\" testo=\"Raccontaci cosa sforni, quanto e in che spazi: ti aiutiamo a scegliere forno, camere e configurazione.\" style=\"display: contents\" hint-size=\"100%,969px\"><\/dc-import>\n<\/main>\n<div class=\"sf-sticky\"><a class=\"pill pill-red\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n\n<dc-import name=\"Comp-Footer\" style=\"display: contents\" hint-size=\"100%,420px\"><\/dc-import>\n\n<\/div>", function (DCLogic) {
+DCLite.define("Applicazione-Panetteria", "<div style=\"min-width:320px;background:#1d1d1c;color:#fff;font-family:'Montserrat',system-ui,sans-serif\">\n\n<dc-import name=\"Comp-Header\" style=\"display: contents\" hint-size=\"100%,81px\"><\/dc-import>\n<main id=\"contenuto\">\n\n<!-- 07 APPLICAZIONE: PANETTERIA -->\n<section class=\"ap-hero\" aria-labelledby=\"ap-titolo\">\n<img class=\"ap-hero-img\" src=\"../img/4b2beba74d8eabbbf72f3b8af86fae92.jpg\" alt=\"\" width=\"1067\" height=\"1600\" fetchpriority=\"high\" style=\"object-position: 50% 60%\">\n<div class=\"wrap\">\n<nav class=\"sf-crumbs\" aria-label=\"Percorso\"><ol><li><a href=\"../home/\">Home<\/a><\/li><li><span>Applicazioni<\/span><\/li><li><span aria-current=\"page\">Panetteria<\/span><\/li><\/ol><\/nav>\n<h1 class=\"ap-h1\" id=\"ap-titolo\">Il forno per la tua panetteria.<\/h1>\n\n<p class=\"ap-lead\">Pane comune, grandi pezzature, farine integrali e senza glutine: ogni impasto chiede la sua cottura. Parti da quello che sforni, il forno viene di conseguenza.<\/p>\n<div class=\"ap-cta\"><a class=\"pill pill-red\" href=\"#stili\" onClick=\"{{goSez}}\">Trova il tuo forno<\/a><\/div>\n<\/div>\n<style>@media (min-width: 1024px){.ap-hero .ap-hero-img{transform:translateX(18%) !important;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 28%);mask-image:linear-gradient(to right,transparent 0%,#000 28%)}}<\/style><\/section>\n<dc-import name=\"Comp-Barra-sezione\" voci=\"{{voci}}\" style=\"display: contents\" hint-size=\"100%,65px\"><\/dc-import>\n\n<!-- CHE PANE FAI -->\n<section class=\"ap-sec reveal\" id=\"stili\" aria-labelledby=\"t-stili\" style=\"padding-top: 0px\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Produzioni<\/div><div class=\"content\"><h2 class=\"ap-h2\" id=\"t-stili\">Che pane fai?<\/h2><p class=\"ap-intro\">Vapore, cicli di temperatura e capacità cambiano con il prodotto. Ecco da quale forno partire.<\/p><\/div><\/div>\n\n<article class=\"ap-stile\">\n<div class=\"ap-img\"><img src=\"../img/6300166db352703cec72c4db224d0c78.jpg\" alt=\"Due camere di MODULAR: in quella superiore una teglia di pizza, in quella inferiore il pane\" width=\"1335\" height=\"834\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Pane e grandi pezzature<\/p>\n<h3>Platea in refrattario e vapore sotto controllo.<\/h3>\n<p>Il pane chiede calore dalla platea e vapore al momento giusto. MODULAR ha la platea in refrattario, camere alte fino a 28 cm per i grandi lievitati e Vapor Control per regolare la saturazione in camera. JACK, con il generatore di vapore e i programmi per la panificazione (optional), cuoce pane e pizza nello stesso forno.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../modular/\"><span><b>MODULAR<\/b><small>Camere da 18 o 28 cm, Vapor Control<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"../jack/\"><span><b>JACK<\/b><small>Con generatore di vapore (optional)<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n\n<article class=\"ap-stile ap-stile--rev\">\n<div class=\"ap-img\"><img src=\"../img/c3f3fb0437cb7ed6373f653444eb7796.jpg\" alt=\"ROTOR in funzione con il carrello di cornetti visibile dal vetro dello sportello\" width=\"1334\" height=\"833\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Volumi e piccola panetteria<\/p>\n<h3>Tante teglie, la stessa cottura su ognuna.<\/h3>\n<p>ROTOR combina convezione e rotazione: il calore arriva uguale su ogni teglia del carrello, dalla superficie al cuore del prodotto. Da 7 a 18 teglie 60 × 40, elettrico o a gas.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../rotor/\"><span><b>ROTOR<\/b><small>Modelli 710 e 1518, elettrico o a gas<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<li><a href=\"../modular/\"><span><b>MODULAR<\/b><small>Aggiungi camere quando cresce la produzione<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n\n<article class=\"ap-stile\">\n<div class=\"ap-img\"><img src=\"../img/7f9e39f2a2d643f154cfed0fe02d74a0.jpg\" alt=\"Mani che spolverano farina accanto a un cestino di panini ai semi\" width=\"1706\" height=\"853\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-txt\">\n<p class=\"ap-k\">Integrale e senza glutine<\/p>\n<h3>Farine speciali, cottura più graduale.<\/h3>\n<p>Le farine integrali, a basso o senza glutine chiedono una cottura più graduale e delicata. Bread Ready di ROTOR è pensato per questo: programmi dedicati, salvati con My Baking e richiamati con un tocco.<\/p>\n<ul class=\"ap-forni\">\n<li><a href=\"../rotor/\"><span><b>ROTOR<\/b><small>Con Bread Ready e programmi per pane e pasticceria<\/small><\/span><span class=\"ap-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><\/span><\/a><\/li>\n<\/ul>\n<\/div>\n<\/article>\n<\/div>\n<\/section>\n\n<!-- COSA CONTA IN PANETTERIA -->\n<section class=\"ap-sec reveal\" id=\"servizio\" aria-labelledby=\"t-serv\">\n<div class=\"wrap\">\n<div class=\"grid2\"><div class=\"label\">Nel laboratorio<\/div><div class=\"content\"><h2 class=\"ap-h2\" id=\"t-serv\">Quello che conta prima dell’apertura.<\/h2><\/div><\/div>\n<ul class=\"ap-plus\">\n<li><img src=\"../img/12301eb88e6ac983009ad36553a6cd1f.svg\" alt=\"\" width=\"64\" height=\"64\" loading=\"lazy\"><div><h3>La stessa ricetta, a ogni turno<\/h3><p>Con My Baking salvi fino a 99 programmi, con cicli di temperatura e di vapore dedicati alla panificazione.<\/p><\/div><\/li>\n<li><img src=\"../img/62aced2ed9cced66e865686b34b3cec7.svg\" alt=\"\" width=\"64\" height=\"72\" loading=\"lazy\"><div><h3>Il vapore giusto per ogni prodotto<\/h3><p>Con Vapor Control di MODULAR regoli la saturazione di vapore in camera.<\/p><\/div><\/li>\n<li><img src=\"../img/9626b128a4e4f042398b6135a3194953.svg\" alt=\"\" width=\"64\" height=\"64\" loading=\"lazy\"><div><h3>Uniforme su tutto il carrello<\/h3><p>Con la Cottura 3D di ROTOR il calore arriva uguale dalla prima all’ultima teglia.<\/p><\/div><\/li>\n<li><img src=\"../img/15ff68ba79e2d147817db8f27068947e.svg\" alt=\"\" width=\"64\" height=\"71\" loading=\"lazy\"><div><h3>Pronto per le farine speciali<\/h3><p>Bread Ready di ROTOR per il pane con farine integrali e senza glutine.<\/p><\/div><\/li>\n<\/ul>\n<\/div>\n<\/section>\n\n<!-- PER LE CATENE -->\n<section class=\"ap-sec reveal\" id=\"catene\" aria-labelledby=\"t-catene\">\n<div class=\"wrap\">\n<div class=\"ap-cat-chain\">\n<div class=\"ap-img\"><img src=\"../img/13e5ede613ea1663df3609f2b06e21b0.webp\" alt=\"La mano di un panificatore imposta il programma sul pannello touch di MODULAR\" width=\"1600\" height=\"1000\" loading=\"lazy\" decoding=\"async\"><\/div>\n<div class=\"ap-chain-txt\">\n<p class=\"ap-k\">Per le catene<\/p>\n<h2 id=\"t-catene\">Il tuo standard. In ogni punto vendita.<\/h2>\n<p>Se il tuo pane deve uscire uguale in ogni punto vendita, si parte dal tuo prodotto: definiamo la cottura, la salviamo nei programmi e verifichiamo che si ripeta con operatori e turni diversi.<\/p>\n<a class=\"lnk\" href=\"../catene/\">Scopri le soluzioni per le catene<\/a>\n<\/div>\n<\/div>\n<\/div>\n<\/section>\n\n<!-- FASCIA CATALOGO -->\n<section class=\"ap-sec reveal\" id=\"catalogo\" aria-labelledby=\"t-cat\">\n<div class=\"wrap\">\n<div class=\"ap-catalogo\">\n<div><h2 id=\"t-cat\">Il dettaglio è nel catalogo.<\/h2><p>Versioni, misure, optional e dati tecnici di JACK, MODULAR e ROTOR: li trovi nel catalogo Gradus 2027.<\/p><\/div>\n<div class=\"ap-catalogo-cta\"><a class=\"pill pill-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path><\/svg><span>Scarica il catalogo<\/span><\/a><a class=\"pill pill-white\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n<\/div>\n<\/div>\n<\/section>\n\n<dc-import name=\"Comp-Richiesta\" forno=\"Panetteria\" titolo=\"Parliamo della tua panetteria.\" testo=\"Raccontaci cosa sforni, quanto e in che spazi: ti aiutiamo a scegliere forno, camere e configurazione.\" style=\"display: contents\" hint-size=\"100%,969px\"><\/dc-import>\n<\/main>\n<div class=\"sf-sticky\"><a class=\"pill pill-red\" href=\"#richiesta\" onClick=\"{{goSez}}\">Richiedi informazioni<\/a><\/div>\n\n<dc-import name=\"Comp-Footer\" style=\"display: contents\" hint-size=\"100%,420px\"><\/dc-import>\n\n<\/div>", function (DCLogic) {
 
 class Component extends DCLogic {
 goSez(e) {
@@ -570,7 +669,7 @@ if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
 el.focus({ preventScroll: true });
 }
 renderVals() {
-return { goSez: (e) => this.goSez(e) };
+return { goSez: (e) => this.goSez(e), voci: [{ href: '#stili', label: 'Produzioni' }, { href: '#servizio', label: 'Nel laboratorio' }, { href: '#catene', label: 'Catene' }, { href: '#catalogo', label: 'Catalogo' }] };
 }
 }
 

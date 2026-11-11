@@ -400,6 +400,19 @@ html{scroll-padding-top:90px}
 #servizi{padding-bottom:84px}
 }
 #contenuto [tabindex="-1"]:focus{outline:none}
+/* Altezza uniforme dell'apertura (11/11): 750 desktop, 700 tablet, 650 mobile */
+.ct-hero{box-sizing:border-box;min-height:0!important;max-height:none!important}
+@media (min-width:1200px){.ct-hero{height:750px!important}}
+@media (min-width:768px) and (max-width:1199px){.ct-hero{height:700px!important}}
+@media (max-width:767px){.ct-hero{height:650px!important}}
+/* Contatti (11/11): la scheda Contatti diretti torna visibile; su mobile sopra il testo */
+@media (min-width:768px) and (max-width:1199px){.ct-hero .ct-direct{display:block!important}.ct-hero-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr)!important;gap:32px!important;align-items:center}.ct-h1{font-size:48px;line-height:1.05}.ct-hero .ct-direct{padding:24px}.ct-direct dd{font-size:16px;line-height:24px}}
+@media (max-width:767px){.ct-hero{padding:84px 0 28px!important}.ct-hero .ct-direct{display:block!important;order:-1;padding:12px 18px!important}.ct-hero-in{gap:20px!important}.ct-direct h2{margin-bottom:2px}.ct-direct dl>div{padding:7px 0;gap:10px;grid-template-columns:22px minmax(0,1fr)}.ct-direct svg.ct-ico{width:20px;height:20px}.ct-direct dt{font-size:12px;line-height:16px}.ct-direct dd{margin-top:0;font-size:15px;line-height:20px}.ct-direct dd a{min-height:24px}.ct-hero .sf-crumbs ol{margin-bottom:12px}.ct-lead{margin-top:12px!important;font-size:16px!important;line-height:24px!important}}
+/* Hover sulle schede (11/11): bordo e bagliore come nei form, solo al passaggio del mouse */
+.ct-link,.ct-sede{outline:1px solid transparent;outline-offset:0;transition:outline-color 250ms cubic-bezier(.2,.8,.2,1),box-shadow 250ms cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover) and (pointer:fine){.ct-link:hover,.ct-sede:hover{outline-color:#D52F5D;box-shadow:0 0 32px 4px rgba(213,47,93,.22)}}
+/* Campi del form (11/11): bordo a 1 px (resta a 2 px in caso di errore) */
+.ct-in:not([aria-invalid="true"]){border-width:1px}
 </style>
 </head>
 <body>

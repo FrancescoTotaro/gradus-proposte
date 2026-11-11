@@ -299,6 +299,13 @@ html{scroll-padding-top:90px}
 .sh-hero::after{background:linear-gradient(180deg,rgba(20,20,19,.55) 0px,rgba(20,20,19,0) 120px,rgba(20,20,19,0) calc(56px + 46vw),#1d1d1c calc(56px + 62.5vw),#1d1d1c 100%)}
 .sh-hero .wrap{padding-top:calc(40px + 62.5vw);padding-bottom:40px}
 }
+/* Altezza uniforme dell'apertura (11/11): 750 desktop, 700 tablet, 650 mobile */
+.sh-hero{box-sizing:border-box;min-height:0!important;max-height:none!important}
+@media (min-width:1200px){.sh-hero{height:750px!important}}
+@media (min-width:768px) and (max-width:1199px){.sh-hero{height:700px!important}}
+@media (max-width:767px){.sh-hero{height:650px!important}}
+/* Mobile (11/11): foto a tutto campo come Applicazione Pizzeria */
+@media (max-width:767px){.sh-hero{background:#1d1d1c!important;position:relative}.sh-hero .sh-hero-img{position:absolute!important;inset:0!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;max-width:none!important;aspect-ratio:auto!important;object-fit:cover!important;transform:none!important;-webkit-mask-image:none!important;mask-image:none!important;object-position:50% 50%!important}.sh-hero::after{content:""!important;display:block!important;position:absolute!important;inset:0!important;top:0!important;height:auto!important;width:auto!important;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(20,20,19,.5) 0%,rgba(20,20,19,0) 18%,rgba(20,20,19,.35) 32%,rgba(20,20,19,.9) 56%,#1d1d1c 100%)!important}.sh-hero .wrap{position:relative!important;z-index:1;padding-top:0!important;padding-bottom:40px!important;margin-top:0!important}}
 </style>
 </head>
 <body>
