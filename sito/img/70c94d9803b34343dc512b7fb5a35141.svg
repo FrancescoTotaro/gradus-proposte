@@ -1,0 +1,18 @@
+<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Livello_2" viewBox="0 0 42.52 42.52">
+  <defs>
+    <linearGradient id="Sfumatura_senza_nome_8" x1="-2227.32" y1="-3149.62" x2="-2227.32" y2="-3107.1" gradientTransform="translate(-2206.0595 -3107.1023) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset=".25" stop-color="#c2063a"></stop>
+      <stop offset="1" stop-color="#230000"></stop>
+    </linearGradient>
+  </defs>
+  <g id="_34-35_MODULAR_apertura">
+    <g>
+      <path d="M42.52,21.26C42.52,9.52,33,0,21.26,0,9.52,0,0,9.52,0,21.26s9.52,21.26,21.26,21.26S42.52,33,42.52,21.26" fill="url(#Sfumatura_senza_nome_8)"></path>
+      <g>
+        <path d="M21.26,5.05c-8.94,0-16.21,7.27-16.21,16.21s7.27,16.21,16.21,16.21,16.21-7.27,16.21-16.21S30.2,5.05,21.26,5.05M21.26,38.41c-9.46,0-17.16-7.69-17.16-17.15S11.8,4.11,21.26,4.11s17.15,7.69,17.15,17.15S30.72,38.41,21.26,38.41" fill="#fff"></path>
+        <path d="M30.83,16.45H11.91v1.93h18.92V16.45ZM30.42,17.98H12.31v-1.13h18.11V17.98Z" fill="#fff"></path>
+        <rect x="11.91" y="24.17" width="18.92" height="1.93" fill="#fff"></rect>
+      </g>
+    </g>
+  </g>
+</svg>
