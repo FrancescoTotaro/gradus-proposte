@@ -83,6 +83,12 @@ html,body{overflow-x:clip}
 .mn-lv1 svg{color:#c9ccce}
 .mn-lv2-top{display:flex;align-items:center;gap:6px;min-height:52px;padding:0 20px;background:none;border:0;color:#c9ccce;font:inherit;font-size:15px;font-weight:600;cursor:pointer;align-self:flex-start}
 .mn-lv2-h{margin:4px 20px 8px;font-size:30px;line-height:36px;font-weight:700;letter-spacing:-.02em}
+/* 20/11: secondo livello allineato al primo: il titolo occupa la riga della voce cliccata, "Menù" a destra sulla stessa riga, le sotto-voci partono dove partiva la seconda voce; "Vai a…" in fondo all'elenco */
+.mn-lv2-top{align-self:flex-end;margin:8px 0 -69px;min-height:69px;position:relative;z-index:1}
+.mn-lv2-h{margin:0 20px;padding-right:100px;min-height:68px;display:flex;align-items:center;font-size:26px;line-height:1.15;font-weight:700;letter-spacing:-.01em;border-bottom:1px solid #4a4947}
+.mn-mob .mn-lv2-h ~ .mn-lv1{padding-top:0}
+.mn-mob .mn-lv2-all{order:1;margin:20px 20px 12px}
+.mn-mob .mn-foot{order:2}
 .mn-lv2-all{align-self:flex-start;margin:0 20px 12px;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#c2063a;text-decoration-thickness:2px;text-underline-offset:6px}
 .mn-foot{margin-top:auto;padding:16px 20px 24px;display:flex;flex-direction:column;gap:14px;border-top:1px solid #4a4947}
 .mn-meta{display:flex;align-items:center;justify-content:space-between;min-height:44px;font-size:14px;font-weight:500;color:#c9ccce}
@@ -468,7 +474,7 @@ html{scroll-padding-top:90px}
 .wrap{padding-left:20px;padding-right:20px}
 .grid2>.content{padding-top:8px}
 .ap-hero{height:min(100svh,844px);min-height:600px}
-.ap-hero .ap-hero-img{height:64%;object-position:72% 68%!important}
+.ap-hero .ap-hero-img{height:100%;object-position:72% 68%!important}
 .ap-hero::after{background:linear-gradient(180deg,rgba(20,20,19,.45) 0%,rgba(20,20,19,0) 16%,rgba(20,20,19,0) 46%,rgba(20,20,19,.75) 58%,#1d1d1c 68%,#1d1d1c 100%)}
 .ap-hero .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .sf-crumbs ol{margin-bottom:16px;font-size:13px}
