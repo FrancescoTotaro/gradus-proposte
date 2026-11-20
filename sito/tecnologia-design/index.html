@@ -46,6 +46,9 @@ html,body{overflow-x:clip}
 @media (prefers-reduced-motion:no-preference){
 @supports (animation-timeline:scroll()){
 .site-head{animation:headIn linear both;animation-timeline:scroll();animation-range:0 240px}
+/* 20/11: sfumatura scura in cima, sotto il menù, finché l'header è trasparente sopra le foto delle aperture */
+@media (min-width:768px){.site-head::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(100% + 60px);background:linear-gradient(180deg,rgba(20,20,19,.6),rgba(20,20,19,0));pointer-events:none;z-index:-1;animation:headScrim linear both;animation-timeline:scroll();animation-range:0 240px}}
+@keyframes headScrim{to{opacity:0}}
 }
 }
 @media (max-width:900px){
@@ -330,6 +333,13 @@ html,body{overflow-x:clip}
 @media (hover:hover) and (pointer:fine){.pill-white:hover{color:#c2063a!important}}
 /* 20/11: testo dei pulsanti centrato anche quando va a capo (regola globale) */
 .pill{text-align:center!important;justify-content:center}
+/* 20/11: correzioni dell'audit di accessibilità (audit-accessibilita-design.md) */
+html body .cb-val,html body .cb-clock b,html body .cb-results b{color:#D52F5D!important;-webkit-text-fill-color:#D52F5D!important}
+html body .gp-meta span{color:#fff!important}
+.sf-crumbs a{padding-block:4px}
+html body .sb-amb::after{background:linear-gradient(180deg,rgba(20,20,19,0) 30%,rgba(20,20,19,.6) 60%,rgba(20,20,19,.92) 100%)!important}
+.sb-vsel button:focus-visible,.gp-sel:focus-visible{outline:3px solid #fff!important;outline-offset:2px!important}
+html body .sb-solo{font-size:12px}
 /* 20/11: hero mobile all'88% dello schermo, tra 520 e 743px; cresce se il contenuto lo richiede */
 @media (max-width:767px){html body #contenuto>.hero,html body .ap-hero,html body .as-hero,html body .cb-hero,html body .ct-hero,html body .ef-hero,html body .gr-hero,html body .ig-hero,html body .ns-hero,html body .nw-hero,html body .pr-hero,html body .rv-hero,html body .sb-hero,html body .sh-hero,html body .td-hero{height:auto!important;min-height:clamp(520px,88vh,743px)!important;min-height:clamp(520px,88svh,743px)!important}}
 /* 20/11: hero mobile come le schede forno: testo in basso, 24px dal fondo */
